@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="Logo.png" class="logo" />
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('internship')">Internship</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="showSection('Certifications')">Certifications</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+            <a href="AbburiVenkataRaviTeja_Resume.pdf" class="btn" target="_blank">Resume</a>
+        </nav>
+
+        <!-- Hero Content -->
+        <div id="home" class="hero-content">
+            <div class="hero-text">
+                <span class="title">Freelance</span>
+                <h1>Hello, I’m <span>Abburi Venkata Ravi Teja</span></h1>
+                <p>I'm passionate about technology and data science.</p>
+            </div>
+            <div class="hero-photo-container">
+                <img src="me.jpg" alt="Abburi Venkata Ravi Teja" class="hero-photo"/>
+            </div>
+        </div>
+
+        <!-- About Section -->
+<div id="about" class="section about-section">
+    <h2>About Me</h2>
+    <p>
+        Hello! I am <b>Abburi Venkata Ravi Teja</b> from Guntur. I am a sociable
+        and realistic person who loves to spend my time doing things of my
+        interest. <br />
+        I have completed my undergraduation in 2024 at Raghu Engineering
+        College with <b>8.08 CGPA</b> in the stream of <b>Computer Science and Engineering
+        -Data Science</b>. <br />I have completed My Intermediate at Vision Junior
+        College in Guntur with <b>83 percent</b>. <br />I have done my
+        schooling at Z.P.High School Timmayyapalem with <b>85 percent</b>.
+        <br />I have undertaken two projects. The first project involved T20 World
+        Cup cricket analysis, where I created a team of Dream11. <br>The second
+        project focuses on understanding the city demand and supply of Uber,
+        analyzing insights that can contribute to the company's business and
+        planning. 
+        <br>
+        I am good at <span class="highlight">Python, SQL, OOPS</span>.
+        <br>Outside academics, my hobbies
+        include playing cricket, watching movies, and listening to music.
+        <br>
+        Being <span class="highlight">optimistic</span> and <span class="highlight">quick-witted</span> are my strengths.
+    </p>
+</div>
+
+        <!-- Internship Section -->
+        <div id="internship" class="section">
+            <h3>Internships</h3>
+            <div class="internship-container">
+                <div class="internship-item">
+                    <p>AI Integrated With Full Stack Development Internship At Robocoupler</p>
+                    <img src="Robo.png" alt="AI Integrated With Full Stack Development Internship At Robocoupler" />
+                </div>
+                <div class="internship-item">
+                    <p>SQL Internship At DevSkillHub</p>
+                    <img src="sql_internship.jpg" alt="SQL Internship At DevSkillHub" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Here are some of my recent projects.</p>
+            <h1>T20 World Cup Cricket Data Analytics</h1>
+            <p>
+                Performed data analytics on T20 world cup cricket (2022) data to build
+                a team of Dream11 players. Engineered data transformation and cleaning
+                pipelines using Python, Pandas, and Jupyter Notebook; reduced data
+                processing time by 50% and increased data accuracy by implementing
+                robust error handling mechanisms.
+            </p>
+            <h3>Dash Board of Project</h3><a
+                target="_blank"
+                href="https://app.powerbi.com/view?r=eyJrIjoiZjFlOTU3MjYtMjc5ZC00YTUxLWJkY2UtNDA0M2M5ZDUxNzc3IiwidCI6ImIzOGYxZjU0LTA2MzgtNDA3NC1hOWE4LTAzM2QxZTJiYzJjNiJ9"
+                >T20 World Cup Cricket Data analysis</a
+            >
+            <br /><br />
+            <h1>Dynamic Pricing Strategy Using Reinforcement Learning</h1>
+            <p>
+                Implemented a dynamic pricing system leveraging real-time data
+                analytics to adjust product prices based on market demand; resulted in
+                a 25% increase in e-commerce revenue during peak sales periods
+                <br>
+                Successfully implemented a reinforcement learning solution for dynamic pricing, utilizing a simulated environment to
+                train a Deep Q-Learning agent. This innovative approach resulted in a 3.48% increase in profits compared to the baseline
+                pricing policy
+                <br>
+                <h3>Project Publication Certificate :</h3> <a href="1.jpg"  target="_blank">International Journal of Innovative Technology and Creative Engineering</a> 
+            </p>
+        </div>
+
+        <!-- Certifications -->
+        <div id="Certifications" class="section Certifications">
+            <h2>Certifications</h2>
+            <div class="cert-container">
+                <div class="cert-item">
+                    <p>Career Essentials in Data Analysis by Microsoft and LinkedIn</p>
+                    <img
+                        src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png"
+                        alt="Career Essentials Certificate"
+                        class="LinkedIn"
+                    />
+                </div>
+                <div class="cert-item">
+                    <p>Python Advance by Cutshort</p>
+                    <img
+                        src="Python-Advance.jpg"
+                        alt="Python Advance Certificate"
+                        class="Cutshort"
+                    />
+                </div>
+            </div>
+            <div class="cert-container second-row">
+                <div class="cert-item">
+                    <p>Certificate of Achievement of Codekaze (All India Rank-665) -- Coding Ninjas</p>
+                    <img
+                        src="Coding_ninjas.jpg"
+                        alt="Certificate of Achievement of Codekaze"
+                        class="Coding_ninjas"
+                    />
+                </div>
+                <div class="cert-item">
+                    <p>Cata Base Management System By NPTEL Swayam</p>
+                    <img
+                        src="Nptel.jpg"
+                        alt="Cata Base Management System"
+                        class="Nptel"
+                    />
+                </div>
+                <div class="cert-item">
+                  <p>SQL (Advance) </p>
+                  <img
+                      src="SQL_HACKERRANK.png"
+                      alt="SQL (Advance)"
+                      class="Hackerrank"
+                  />
+              </div>
+              <div class="cert-item">
+                <p>AWS Academy Graduate - AWS Academy Cloud Foundations
+                </p>
+                <img
+                    src="aws.png"
+                    alt="AWS Academy Graduate - AWS Academy Cloud Foundations"
+                    class="AWS"
+                />
+            </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>
+                Mail: <a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a> <br />
+                Contact Number: <a href="tel:+919618760508">+91 96187 60508</a><br />
+                Whatsapp: <a href="https://wa.me/919618760508" target="_blank">+91 96187 60508</a><br>
+                LinkedIn : <a href="https://www.linkedin.com/in/venkata-raviteja-abburi-b99b00210/" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.section, .hero-content');
+        sections.forEach((section) => (section.style.display = 'none'));
+
+        // Show the selected section
+        if (sectionId === 'home') {
+          document.querySelector('.hero-content').style.display = 'flex';
+        } else {
+          const selectedSection = document.getElementById(sectionId);
+          selectedSection.style.display = 'block';
+        }
+      }
+
+      // Set default section to 'home' on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        showSection('home');
+      });
+    </script>
+</body>
+</html>
