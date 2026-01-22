@@ -144,22 +144,49 @@ nav ul li a:hover:after {
 }
 
 /* Internship Section */
-.internship-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.internship-item {
-  flex: 1 1 calc(50% - 20px);
-  max-width: calc(50% - 20px);
-}
-.internship-item img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 10px;
+./* Experience Section */
+.experience-section {
+  background: #f9fafc;
 }
 
+.experience-card {
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.experience-card h3 {
+  color: #2c3e50;
+}
+
+.company {
+  display: block;
+  font-weight: 600;
+  color: #555;
+}
+
+.duration {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+}
+
+.experience-card li {
+  margin-bottom: 8px;
+}
+
+.tech-stack {
+  background: #f5f7fa;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
 /* Certifications Section */
 .Certifications {
   padding: 20px;
@@ -225,4 +252,5 @@ nav ul li a:hover:after {
 .about-section br {
   margin-bottom: 10px;
 }
+
 
