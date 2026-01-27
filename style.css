@@ -200,3 +200,37 @@ nav ul li a:hover::after {
     margin-top: 20px;
   }
 }
+/* TEXT ANIMATION */
+.animate-float {
+  opacity: 0;
+  animation: floatIn 1.2s ease forwards;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typing span {
+  opacity: 0;
+  display: inline-block;
+  animation: wordFade 0.5s ease forwards;
+}
+
+@keyframes wordFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
