@@ -19,45 +19,18 @@
             </ul>
             <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
         </nav>
-        
-  
+
         <!-- Hero Content -->
-        <div class="hero">
-    <div class="hero-content">
-
-        <div class="hero-text">
-            <span class="title">Freelance</span>
-            <h1 id="animated-name"></h1>
-            <p id="animated-desc"></p>
+        <div id="home" class="hero-content">
+            <div class="hero-text">
+                <span class="title">Freelance</span>
+                <h1>Hello, I’m <span>Abburi Venkata Ravi Teja</span></h1>
+                <p>I'm passionate about technology and data science.</p>
+            </div>
+            <div class="hero-photo-container">
+                <img src="me.jpg" alt="Abburi Venkata Ravi Teja" class="hero-photo"/>
+            </div>
         </div>
-
-        <img src="me.jpg" alt="Abburi Venkata Ravi Teja" class="hero-photo" />
-
-    </div>
-</div>
-
-        <script>
-        const nameText = "Hello, I’m Abburi Venkata Ravi Teja";
-        const descText = "I'm passionate about technology and data science.";
-        
-        function animateText(text, elementId, delay = 160) {
-            const element = document.getElementById(elementId);
-            element.innerHTML = "";
-            element.classList.add("typing");
-        
-            text.split(" ").forEach((word, index) => {
-                const span = document.createElement("span");
-                span.textContent = word + " ";
-                span.style.animationDelay = `${index * delay}ms`;
-                element.appendChild(span);
-            });
-        }
-        
-        document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(() => animateText(nameText, "animated-name", 180), 600);
-            setTimeout(() => animateText(descText, "animated-desc", 140), 2400);
-        });
-        </script>
 
         <!-- About Section -->
  <div id="about" class="section about-section">
