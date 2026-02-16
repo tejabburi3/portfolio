@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +9,20 @@
   font-family: "Poppins", sans-serif;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden; /* Removes full page scroll */
-}
-
 a {
   text-decoration: none;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO SECTION ================= */
 .hero {
   width: 100%;
-  height: 100vh;
-  background: #f8f8f8;
-  overflow: hidden;
+  min-height: 100vh;
+  background: url(img/bg.png);
+  background-size: cover;
+  background-position: center;
 }
 
-/* ================= NAV ================= */
+/* ================= NAVIGATION ================= */
 nav {
   display: flex;
   align-items: center;
@@ -45,17 +43,36 @@ nav ul li {
 nav ul li a {
   color: #1d1d24;
   position: relative;
+  padding: 5px 0;
 }
 
 nav ul li a:hover {
   color: #fd4766;
 }
 
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fd4766;
+  transition: 0.3s;
+  bottom: 0;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
 /* ================= BUTTON ================= */
 .btn {
   color: #fff;
-  padding: 12px 30px;
-  border-radius: 30px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  font-weight: 500;
   background: #fd4766;
   border: 2px solid #fd4766;
   transition: 0.3s;
@@ -71,44 +88,120 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 120px);
-  padding: 40px;
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+}
+
+#home.hero-content {
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .hero-text {
   max-width: 600px;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
-.hero-text h1 {
-  font-size: 50px;
-  margin-top: 20px;
-}
-
-.hero-text p {
-  margin-top: 20px;
-  font-size: 18px;
+.hero-photo-container {
+  display: flex;
+  justify-content: center;
 }
 
 .hero-photo {
-  width: 220px;
+  max-width: 250px;
   border-radius: 50%;
+}
+
+/* ================= TEXT STYLES ================= */
+.hero-text .title {
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg, #1c99fe, #7644ff, #fd4766);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: floatIn 1.2s ease forwards;
+}
+
+.hero-text h1 {
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 90px;
+}
+
+.hero-text h1 span {
+  color: #fd4766;
+}
+
+.hero-text p {
+  margin-top: 25px;
+  color: #202020;
+  font-size: 18px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typing span {
+  opacity: 0;
+  display: inline-block;
+  animation: wordFade 0.5s ease forwards;
+}
+
+@keyframes wordFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ================= SECTIONS ================= */
 .section {
   display: none;
-  height: 100vh;
-  width: 100%;
-  padding: 60px;
+  padding: 40px;
   background-color: #f4f4f4;
-  overflow-y: auto; /* Scroll only inside section if needed */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-/* ================= ANIMATION ================= */
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-right: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  .hero-photo {
+    max-width: 180px;
+    margin-top: 20px;
+  }
+}
+/* TEXT ANIMATION */
 .animate-float {
   opacity: 0;
   animation: floatIn 1.2s ease forwards;
@@ -141,3 +234,4 @@ nav ul li a:hover {
     transform: translateY(0);
   }
 }
+
