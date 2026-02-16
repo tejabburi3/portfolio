@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- ================= HERO ================ -->
+<!-- ================= HERO ================= -->
 <div class="hero">
     <nav>
         <img src="Logo.png" class="logo" />
@@ -29,41 +29,102 @@
             <h1 id="animated-name"></h1>
             <p id="animated-desc"></p>
         </div>
-
         <div class="hero-photo-container">
             <img src="me.jpg" alt="Abburi Venkata Ravi Teja" class="hero-photo"/>
         </div>
     </div>
 </div>
 
-<!-- About -->
+<!-- ================= ABOUT ================= -->
 <div id="about" class="section">
     <h2>About Me</h2>
-    <p>Hello! I am <b>Venkata Ravi Teja Abburi</b>, passionate about technology and data science.</p>
+    <p>Hello! I am <b>Venkata Ravi Teja Abburi</b>, a passionate and self-driven individual from Guntur, Andhra Pradesh. I specialize in technology and data science.</p>
+
+    <h3>Education</h3>
+    <p>
+        B.Tech - Computer Science & Data Science Engineering <br>
+        Raghu Institute of Technology (2020 - 2024) - 8.08 CGPA <br><br>
+        Intermediate - MPC <br>
+        Vision Jr College (2018 - 2020) - 8.73 CGPA
+    </p>
+
+    <h3>Skills</h3>
+    <p>
+        Programming: Python, SQL, Java <br>
+        ML: Classification Models, Feature Engineering, Time-Series CV <br>
+        Frameworks: Scikit-learn, XGBoost <br>
+        Visualization: Pandas, NumPy, Matplotlib, Seaborn, Power BI <br>
+        Tools: Git, VS Code, Jupyter Notebook
+    </p>
+
+    <h3>Hobbies</h3>
+    <p>Playing Cricket, Watching Movies, Listening to Music</p>
+
+    <h3>Strengths</h3>
+    <p>Optimistic, Quick-Witted, Strong Analytical Skills</p>
 </div>
 
-<!-- Experience -->
+<!-- ================= EXPERIENCE ================= -->
 <div id="experience" class="section">
-    <h2>Experience</h2>
-    <p>AI Intern at DeviSkillHub & RoboCoupler.</p>
+    <h2>Work Experience</h2>
+
+    <h3>AI Intern – DeviSkillHub (Nov 2024 – Apr 2025)</h3>
+    <ul>
+        <li>Built ML pipelines with preprocessing & feature engineering.</li>
+        <li>Improved classification model performance.</li>
+        <li>Created data validation & cleaning pipelines.</li>
+    </ul>
+
+    <h3>AI Intern – RoboCoupler (Jul 2023 – Sep 2023)</h3>
+    <ul>
+        <li>Developed ML models for prediction tasks.</li>
+        <li>Reduced overfitting with tuning & feature selection.</li>
+        <li>Aligned models with business objectives.</li>
+    </ul>
 </div>
 
-<!-- Projects -->
+<!-- ================= PROJECTS ================= -->
 <div id="projects" class="section">
     <h2>Projects</h2>
-    <p>T20 World Cup Data Analytics, Dynamic Pricing RL, Uber Demand Optimization.</p>
+
+    <h3>T20 World Cup Cricket Data Analytics</h3>
+    <p>
+        Built Dream11 team using Python & Power BI. Reduced processing time by 50%.
+    </p>
+
+    <h3>Dynamic Pricing Using Reinforcement Learning</h3>
+    <p>
+        Built Deep Q-Learning model. Increased profits by 3.48%.
+    </p>
+
+    <h3>Ride Demand-Supply Optimization – Uber</h3>
+    <p>
+        Built Streamlit app analyzing hourly demand & driver performance.
+    </p>
 </div>
 
-<!-- Certifications -->
+<!-- ================= CERTIFICATIONS ================= -->
 <div id="certifications" class="section">
     <h2>Certifications</h2>
-    <p>Microsoft Data Analysis, AWS Cloud Foundations, SQL Advanced.</p>
+    <ul>
+        <li>Career Essentials in Data Analysis – Microsoft & LinkedIn</li>
+        <li>Python Advance – Cutshort</li>
+        <li>Codekaze – All India Rank 665</li>
+        <li>Database Management – NPTEL</li>
+        <li>SQL Advanced – HackerRank</li>
+        <li>AWS Cloud Foundations</li>
+    </ul>
 </div>
 
-<!-- Contact -->
+<!-- ================= CONTACT ================= -->
 <div id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: abburiraviteja4@gmail.com</p>
+    <p>
+        Email: abburiraviteja4@gmail.com <br>
+        Phone: +91 96187 60508 <br>
+        LinkedIn: linkedin.com/in/venkata-ravi-teja-abburi-b99b00210 <br>
+        GitHub: github.com/tejabburi3
+    </p>
 </div>
 
 <!-- ================= SCRIPT ================= -->
@@ -95,8 +156,6 @@ function showSection(sectionId) {
     } else {
         document.getElementById(sectionId).style.display = "flex";
     }
-
-    window.scrollTo(0, 0);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
