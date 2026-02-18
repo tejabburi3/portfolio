@@ -23,7 +23,16 @@ a {
     color: inherit;
 }
 
-/* ================= NAVIGATION ================= */
+/* ================= HERO SECTION ================= */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)), url(img/bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -82,4 +91,59 @@ a {
     padding: 12px 30px;
     border-radius: 50px;
     background: var(--accent-color);
-    border: 
+    border: 2px solid var(--accent-color);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-right: 50px;
+}
+
+.hero-photo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-photo {
+    max-width: 250px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: var(--shadow);
+}
+
+.title {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color),
