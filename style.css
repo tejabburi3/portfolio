@@ -23,7 +23,7 @@ a {
     color: inherit;
 }
 
-/* ================= NAVIGATION ================= */
+/* ================= NAVIGATION ================ */
 .navbar {
     display: flex;
     align-items: center;
@@ -543,4 +543,5 @@ footer {
         transform: translateX(-50%) translateY(-5px);
     }
 }
+
 
