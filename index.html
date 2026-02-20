@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- Background Orbs for 3D effect -->
+    <!-- Background Orbs -->
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
@@ -18,12 +18,12 @@
     <nav>
         <img src="Logo.png" class="logo" alt="Logo" />
         <ul class="nav-links">
-            <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#" onclick="showSection('about')"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#" onclick="showSection('experience')"><i class="fas fa-briefcase"></i> Experience</a></li>
-            <li><a href="#" onclick="showSection('projects')"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#" onclick="showSection('certifications')"><i class="fas fa-certificate"></i> Certifications</a></li>
-            <li><a href="#" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#" onclick="showSection('home'); return false;">Home</a></li>
+            <li><a href="#" onclick="showSection('about'); return false;">About</a></li>
+            <li><a href="#" onclick="showSection('experience'); return false;">Experience</a></li>
+            <li><a href="#" onclick="showSection('projects'); return false;">Projects</a></li>
+            <li><a href="#" onclick="showSection('certifications'); return false;">Certifications</a></li>
+            <li><a href="#" onclick="showSection('contact'); return false;">Contact</a></li>
         </ul>
         <a href="VenkataRaviTeja_Abburi.pdf" class="btn-resume" target="_blank"><i class="fas fa-download"></i> Resume</a>
         <div class="hamburger" onclick="toggleMenu()">
@@ -208,22 +208,35 @@
     </footer>
 
     <script>
+        // Function to show specific section
         function showSection(sectionId) {
-            // Hide all sections
+            // 1. Remove 'active' class from ALL sections
             document.querySelectorAll('.section').forEach(sec => {
                 sec.classList.remove('active');
             });
 
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Close mobile menu if open
-            document.querySelector('.nav-links').classList.remove('active');
+            // 2. Add 'active' class to the clicked section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+
+            // 3. Close mobile menu if it's open
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
         }
 
+        // Toggle mobile menu
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('active');
         }
+
+        // Initialize: Ensure only Home is shown on load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
     </script>
 </body>
 </html>
