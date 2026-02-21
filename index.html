@@ -11,7 +11,7 @@
 
 <nav class="navbar">
     <img src="Logo.png" class="logo" alt="Logo" />
-    <ul class="nav-links" id="navLinks">
+    <ul class="nav-links">
         <li><a onclick="showSection('home')">Home</a></li>
         <li><a onclick="showSection('about')">About</a></li>
         <li><a onclick="showSection('experience')">Experience</a></li>
@@ -19,18 +19,15 @@
         <li><a onclick="showSection('certifications')">Certifications</a></li>
         <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
-    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-    </div>
+    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Resume</a>
 </nav>
 
 <section id="home" class="hero">
     <div class="hero-content">
         <div class="hero-text">
-            <span class="title"><i class="fas fa-code"></i> AI Intern & Developer</span>
             <h1 id="animated-name"></h1>
             <p id="animated-desc"></p>
+            <button class="btn" onclick="showSection('about')">Explore My Work</button>
         </div>
         <div class="hero-photo-container">
             <img src="me.jpg" alt="Ravi Teja" class="hero-photo" />
@@ -41,14 +38,28 @@
 <section id="about" class="section">
     <div class="container">
         <h2 class="section-title">About Me</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">I am a passionate developer from Guntur, specializing in <b>Data Science</b> and <b>Machine Learning</b>. I leverage analytical skills to solve real-world problems.</p>
         <div class="about-grid">
             <div class="card">
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <p><b>B.Tech in Data Science</b><br>Raghu Institute of Technology (2020-2024)<br>8.08 CGPA</p>
+                <p><b>B.Tech CSE (Data Science)</b><br>Raghu Institute of Technology (2020-24) - <b>8.08 CGPA</b></p>
+                <p><b>Intermediate (MPC)</b><br>Vision Jr College (2018-20) - <b>8.73 CGPA</b></p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-tools"></i> Core Skills</h3>
-                <p>Python, SQL, Machine Learning, Power BI, Scikit-learn, XGBoost.</p>
+                <h3><i class="fas fa-tools"></i> Skills</h3>
+                <div class="skills-tags">
+                    <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">Java</span>
+                    <span class="badge">Machine Learning</span> <span class="badge">Pandas</span> <span class="badge">Power BI</span>
+                    <span class="badge">Scikit-learn</span> <span class="badge">XGBoost</span> <span class="badge">REST API</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-star"></i> Extra-Curricular</h3>
+                <ul>
+                    <li>100+ Problems on HackerRank</li>
+                    <li>NSS Volunteer (2022-24)</li>
+                    <li>Strong Problem Solver</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -56,15 +67,17 @@
 
 <section id="experience" class="section">
     <div class="container">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title">Work Experience</h2>
         <div class="experience-grid">
             <div class="card">
                 <h3>AI Intern</h3>
                 <p><b>DeviSkillHub</b> | Nov 2024 - Apr 2025</p>
-                <ul>
-                    <li>Built end-to-end ML pipelines.</li>
-                    <li>Developed data cleaning scripts.</li>
-                </ul>
+                <p>Built end-to-end ML pipelines and developed data cleaning pipelines using Scikit-learn and Pandas.</p>
+            </div>
+            <div class="card">
+                <h3>AI Intern</h3>
+                <p><b>RoboCoupler</b> | Jul 2023 - Sep 2023</p>
+                <p>Analyzed datasets for classification models and collaborated with engineers for business alignment.</p>
             </div>
         </div>
     </div>
@@ -75,14 +88,19 @@
         <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
             <div class="card">
-                <h3>Dynamic Pricing (RL)</h3>
-                <p>Boosted profits by 3.48% using Reinforcement Learning.</p>
-                <div class="tech-stack"><span class="badge">Python</span><span class="badge">RL</span></div>
+                <h3>T20 World Cup Analytics</h3>
+                <p>Dream11 team selection using Python and Power BI.</p>
+                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank">View Dashboard</a>
             </div>
             <div class="card">
-                <h3>Uber Demand Hub</h3>
-                <p>Streamlit app for supply-demand optimization.</p>
-                <div class="tech-stack"><span class="badge">Streamlit</span><span class="badge">Python</span></div>
+                <h3>Dynamic Pricing (RL)</h3>
+                <p>Increased revenue by 25% using Deep Q-Learning.</p>
+                <span class="badge">Reinforcement Learning</span>
+            </div>
+            <div class="card">
+                <h3>Uber Demand App</h3>
+                <p>Built a Streamlit app for ride optimization.</p>
+                <a href="https://driveruber.streamlit.app/" target="_blank">Open App</a>
             </div>
         </div>
     </div>
@@ -93,12 +111,20 @@
         <h2 class="section-title">Certifications</h2>
         <div class="cert-grid">
             <div class="card cert-item">
-                <img src="aws.png" alt="AWS">
+                <img src="aws.png">
                 <p>AWS Academy Graduate</p>
             </div>
             <div class="card cert-item">
-                <img src="SQL_HACKERRANK.png" alt="SQL">
+                <img src="SQL_HACKERRANK.png">
                 <p>SQL (Advanced) - HackerRank</p>
+            </div>
+            <div class="card cert-item">
+                <img src="Python-Advance.jpg">
+                <p>Python Advance - Cutshort</p>
+            </div>
+            <div class="card cert-item">
+                <img src="Nptel.jpg">
+                <p>DBMS - NPTEL Swayam</p>
             </div>
         </div>
     </div>
@@ -106,17 +132,20 @@
 
 <section id="contact" class="section">
     <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-grid">
-            <div class="contact-item"><i class="fas fa-envelope"></i> abburiraviteja4@gmail.com</div>
-            <div class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</div>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <div class="card">
+                <p><i class="fas fa-envelope"></i> abburiraviteja4@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 96187 60508</p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210">LinkedIn Profile</a></p>
+            </div>
         </div>
     </div>
 </section>
 
 <script>
 const nameText = "Hello, I’m Abburi Venkata Ravi Teja";
-const descText = "I'm passionate about technology and data science.";
+const descText = "I'm an AI Intern passionate about Data Science.";
 
 function animateText(text, elementId) {
     const el = document.getElementById(elementId);
@@ -126,42 +155,25 @@ function animateText(text, elementId) {
         span.textContent = word + " ";
         span.style.opacity = "0";
         span.style.display = "inline-block";
-        span.style.animation = `wordFade 0.5s forwards ${i * 0.15}s`;
+        span.style.transform = "translateY(10px)";
+        span.style.animation = `fadeUp 0.4s forwards ${i * 0.1}s`;
         el.appendChild(span);
     });
 }
 
-function showSection(sectionId) {
-    // Hide all sections and hero
+function showSection(id) {
     document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
-    
-    const target = document.getElementById(sectionId);
-    if (sectionId === 'home') {
-        target.style.display = 'flex';
-        animateText(nameText, "animated-name");
-        animateText(descText, "animated-desc");
-    } else {
-        target.style.display = 'block';
-    }
-    
-    // Close mobile menu
-    document.getElementById('navLinks').classList.remove('active');
-    window.scrollTo(0, 0);
+    const target = document.getElementById(id);
+    target.style.display = (id === 'home') ? 'flex' : 'block';
+    if(id === 'home') { animateText(nameText, 'animated-name'); animateText(descText, 'animated-desc'); }
+    window.scrollTo(0,0);
 }
 
-function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('active');
-}
-
-// Initialize
 window.onload = () => showSection('home');
 </script>
 
 <style>
-@keyframes wordFade {
-    to { opacity: 1; transform: translateY(0); }
-    from { opacity: 0; transform: translateY(10px); }
-}
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 </style>
 
 </body>
