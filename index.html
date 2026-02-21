@@ -3,240 +3,166 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Portfolio - Venkata Ravi Teja Abburi</title>
+    <title>Venkata Ravi Teja Abburi | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
 
-    <!-- Background Orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
+<nav class="navbar">
+    <img src="Logo.png" class="logo" alt="Logo" />
+    <ul class="nav-links" id="navLinks">
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('about')">About</a></li>
+        <li><a onclick="showSection('experience')">Experience</a></li>
+        <li><a onclick="showSection('projects')">Projects</a></li>
+        <li><a onclick="showSection('certifications')">Certifications</a></li>
+        <li><a onclick="showSection('contact')">Contact</a></li>
+    </ul>
+    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
 
-    <!-- Navigation -->
-    <nav>
-        <img src="Logo.png" class="logo" alt="Logo" />
-        <ul class="nav-links">
-            <li><a href="#" onclick="showSection('home'); return false;">Home</a></li>
-            <li><a href="#" onclick="showSection('about'); return false;">About</a></li>
-            <li><a href="#" onclick="showSection('experience'); return false;">Experience</a></li>
-            <li><a href="#" onclick="showSection('projects'); return false;">Projects</a></li>
-            <li><a href="#" onclick="showSection('certifications'); return false;">Certifications</a></li>
-            <li><a href="#" onclick="showSection('contact'); return false;">Contact</a></li>
-        </ul>
-        <a href="VenkataRaviTeja_Abburi.pdf" class="btn-resume" target="_blank"><i class="fas fa-download"></i> Resume</a>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <span class="title"><i class="fas fa-code"></i> AI Intern & Developer</span>
+            <h1 id="animated-name"></h1>
+            <p id="animated-desc"></p>
         </div>
-    </nav>
-
-    <!-- HOME SECTION -->
-    <div id="home" class="section active">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h3>Freelance Developer</h3>
-                <h1>Hello, I'm <span>Abburi Venkata Ravi Teja</span></h1>
-                <p>I'm passionate about technology and data science.</p>
-            </div>
-            <div class="hero-img-container">
-                <div class="glass-card-3d">
-                    <img src="me.jpg" alt="Abburi Venkata Ravi Teja" class="hero-img" />
-                </div>
-            </div>
+        <div class="hero-photo-container">
+            <img src="me.jpg" alt="Ravi Teja" class="hero-photo" />
         </div>
     </div>
+</section>
 
-    <!-- ABOUT SECTION -->
-    <div id="about" class="section">
-        <h2><i class="fas fa-user"></i> About Me</h2>
-        <p class="intro-text">Hello! I am <b>Venkata Ravi Teja Abburi</b>, a passionate and self-driven individual from Guntur, Andhra Pradesh. I specialize in technology and data science, leveraging my strong technical and analytical skills to solve real-world problems.</p>
-        
-        <div class="grid-2">
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
             <div class="card">
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <ul>
-                    <li><b>B.Tech</b> in CS & Data Science<br />Raghu Institute of Technology (2020-2024) - <span class="highlight">8.08 CGPA</span></li>
-                    <li><b>Intermediate</b><br />Vision Jr College (2018-2020) - <span class="highlight">8.73 CGPA</span></li>
-                </ul>
+                <p><b>B.Tech in Data Science</b><br>Raghu Institute of Technology (2020-2024)<br>8.08 CGPA</p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-tools"></i> Skills</h3>
-                <ul>
-                    <li><b>Programming:</b> Python, SQL, Java</li>
-                    <li><b>ML:</b> Scikit-learn, XGBoost, Time-Series</li>
-                    <li><b>Data Analysis:</b> Pandas, NumPy, Power BI</li>
-                    <li><b>Tools:</b> Git, VS Code, Jupyter</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-heart"></i> Hobbies & Strengths</h3>
-                <ul>
-                    <li>Hobbies: Cricket, Movies, Music</li>
-                    <li>Strengths: <span class="highlight">Optimistic</span>, Quick-Witted</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-users"></i> Extra-Curricular</h3>
-                <ul>
-                    <li>Solved 100+ problems on HackerRank</li>
-                    <li>NSS Volunteer (2022-2024)</li>
-                </ul>
+                <h3><i class="fas fa-tools"></i> Core Skills</h3>
+                <p>Python, SQL, Machine Learning, Power BI, Scikit-learn, XGBoost.</p>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- EXPERIENCE SECTION -->
-    <div id="experience" class="section">
-        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
-        <div class="grid-2">
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-grid">
             <div class="card">
                 <h3>AI Intern</h3>
-                <span class="company"><i class="fas fa-building"></i> DeviSkillHub</span>
-                <span class="duration"><i class="fas fa-calendar"></i> Nov 2024 – Apr 2025</span>
+                <p><b>DeviSkillHub</b> | Nov 2024 - Apr 2025</p>
                 <ul>
                     <li>Built end-to-end ML pipelines.</li>
-                    <li>Trained classification models using Scikit-learn.</li>
-                    <li>Developed data validation pipelines.</li>
+                    <li>Developed data cleaning scripts.</li>
                 </ul>
-                <div class="tags">
-                    <span class="badge">Python</span> <span class="badge">ML</span> <span class="badge">Pandas</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>AI Intern</h3>
-                <span class="company"><i class="fas fa-building"></i> RoboCoupler</span>
-                <span class="duration"><i class="fas fa-calendar"></i> Jul 2023 – Sep 2023</span>
-                <ul>
-                    <li>Analyzed datasets and developed ML models.</li>
-                    <li>Performed feature selection and tuning.</li>
-                </ul>
-                <div class="tags">
-                    <span class="badge">Python</span> <span class="badge">ML</span>
-                </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- PROJECTS SECTION -->
-    <div id="projects" class="section">
-        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>T20 World Cup Analytics</h3>
-                <p>Performed analytics on T20 data to build Dream11 team. Reduced processing time by 50%.</p>
-                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank" class="link">View Dashboard <i class="fas fa-external-link-alt"></i></a>
-                <div class="tags">
-                    <span class="badge">Python</span> <span class="badge">Power BI</span>
-                </div>
-            </div>
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
             <div class="card">
                 <h3>Dynamic Pricing (RL)</h3>
-                <p>Implemented dynamic pricing with RL, increasing revenue by 25%.</p>
-                <a href="1.jpg" target="_blank" class="link">Certificate <i class="fas fa-external-link-alt"></i></a>
-                <div class="tags">
-                    <span class="badge">Reinforcement Learning</span>
-                </div>
+                <p>Boosted profits by 3.48% using Reinforcement Learning.</p>
+                <div class="tech-stack"><span class="badge">Python</span><span class="badge">RL</span></div>
             </div>
             <div class="card">
-                <h3>RideDemand Hub (Uber)</h3>
-                <p>Streamlit app for ride demand analysis with login insights.</p>
-                <a href="https://driveruber.streamlit.app/" target="_blank" class="link">View App <i class="fas fa-external-link-alt"></i></a>
-                <div class="tags">
-                    <span class="badge">Streamlit</span> <span class="badge">Seaborn</span>
-                </div>
+                <h3>Uber Demand Hub</h3>
+                <p>Streamlit app for supply-demand optimization.</p>
+                <div class="tech-stack"><span class="badge">Streamlit</span><span class="badge">Python</span></div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- CERTIFICATIONS SECTION -->
-    <div id="certifications" class="section">
-        <h2><i class="fas fa-certificate"></i> Certifications</h2>
-        <div class="grid-4">
-            <div class="card cert-card">
-                <img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png" alt="Cert">
-                <p>Data Analysis (Microsoft)</p>
+<section id="certifications" class="section">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <div class="card cert-item">
+                <img src="aws.png" alt="AWS">
+                <p>AWS Academy Graduate</p>
             </div>
-            <div class="card cert-card">
-                <img src="Python-Advance.jpg" alt="Cert">
-                <p>Python Advance</p>
-            </div>
-            <div class="card cert-card">
-                <img src="Coding_ninjas.jpg" alt="Cert">
-                <p>Codekaze (AIR 665)</p>
-            </div>
-            <div class="card cert-card">
-                <img src="Nptel.jpg" alt="Cert">
-                <p>DBMS (NPTEL)</p>
-            </div>
-            <div class="card cert-card">
-                <img src="SQL_HACKERRANK.png" alt="Cert">
-                <p>SQL (Advance)</p>
-            </div>
-            <div class="card cert-card">
-                <img src="aws.png" alt="Cert">
-                <p>AWS Cloud Foundations</p>
+            <div class="card cert-item">
+                <img src="SQL_HACKERRANK.png" alt="SQL">
+                <p>SQL (Advanced) - HackerRank</p>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- CONTACT SECTION -->
-    <div id="contact" class="section">
-        <h2><i class="fas fa-envelope"></i> Contact</h2>
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
         <div class="contact-grid">
-            <div class="contact-card">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:abburiraviteja4@gmail.com">Email Me</a>
-            </div>
-            <div class="contact-card">
-                <i class="fas fa-phone"></i>
-                <a href="tel:+919618760508">Call Me</a>
-            </div>
-            <div class="contact-card">
-                <i class="fab fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn</a>
-            </div>
-            <div class="contact-card">
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/tejabburi3" target="_blank">GitHub</a>
-            </div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> abburiraviteja4@gmail.com</div>
+            <div class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</div>
         </div>
     </div>
+</section>
 
-    <footer>
-        <p>&copy; 2023 Venkata Ravi Teja Abburi. All rights reserved.</p>
-    </footer>
+<script>
+const nameText = "Hello, I’m Abburi Venkata Ravi Teja";
+const descText = "I'm passionate about technology and data science.";
 
-    <script>
-        // Function to show specific section
-        function showSection(sectionId) {
-            // 1. Remove 'active' class from ALL sections
-            document.querySelectorAll('.section').forEach(sec => {
-                sec.classList.remove('active');
-            });
+function animateText(text, elementId) {
+    const el = document.getElementById(elementId);
+    el.innerHTML = "";
+    text.split(" ").forEach((word, i) => {
+        const span = document.createElement("span");
+        span.textContent = word + " ";
+        span.style.opacity = "0";
+        span.style.display = "inline-block";
+        span.style.animation = `wordFade 0.5s forwards ${i * 0.15}s`;
+        el.appendChild(span);
+    });
+}
 
-            // 2. Add 'active' class to the clicked section
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.classList.add('active');
-            }
+function showSection(sectionId) {
+    // Hide all sections and hero
+    document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
+    
+    const target = document.getElementById(sectionId);
+    if (sectionId === 'home') {
+        target.style.display = 'flex';
+        animateText(nameText, "animated-name");
+        animateText(descText, "animated-desc");
+    } else {
+        target.style.display = 'block';
+    }
+    
+    // Close mobile menu
+    document.getElementById('navLinks').classList.remove('active');
+    window.scrollTo(0, 0);
+}
 
-            // 3. Close mobile menu if it's open
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
-        }
+function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
 
-        // Toggle mobile menu
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
+// Initialize
+window.onload = () => showSection('home');
+</script>
 
-        // Initialize: Ensure only Home is shown on load
-        document.addEventListener('DOMContentLoaded', () => {
-            showSection('home');
-        });
-    </script>
+<style>
+@keyframes wordFade {
+    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(10px); }
+}
+</style>
+
 </body>
 </html>
