@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Venkata Ravi Teja Abburi | Portfolio</title>
+    <title>Portfolio - Venkata Ravi Teja Abburi</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
@@ -19,15 +19,16 @@
         <li><a onclick="showSection('certifications')">Certifications</a></li>
         <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
-    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Resume</a>
+    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
 </nav>
 
 <section id="home" class="hero">
     <div class="hero-content">
         <div class="hero-text">
+            <span class="badge" style="background: var(--accent-color); color: white;">Available for Hire</span>
             <h1 id="animated-name"></h1>
             <p id="animated-desc"></p>
-            <button class="btn" onclick="showSection('about')">Explore My Work</button>
+            <button class="btn" onclick="showSection('about')">View Profile</button>
         </div>
         <div class="hero-photo-container">
             <img src="me.jpg" alt="Ravi Teja" class="hero-photo" />
@@ -38,27 +39,30 @@
 <section id="about" class="section">
     <div class="container">
         <h2 class="section-title">About Me</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">I am a passionate developer from Guntur, specializing in <b>Data Science</b> and <b>Machine Learning</b>. I leverage analytical skills to solve real-world problems.</p>
+        <p style="text-align: center; margin-bottom: 40px;">Hello! I am <b>Venkata Ravi Teja Abburi</b>, specializing in technology and data science engineering.</p>
         <div class="about-grid">
             <div class="card">
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <p><b>B.Tech CSE (Data Science)</b><br>Raghu Institute of Technology (2020-24) - <b>8.08 CGPA</b></p>
-                <p><b>Intermediate (MPC)</b><br>Vision Jr College (2018-20) - <b>8.73 CGPA</b></p>
+                <ul>
+                    <li><b>B.Tech (CSE - Data Science)</b><br>Raghu Institute of Technology (2020-2024)<br><span class="highlight">8.08 CGPA</span></li>
+                    <li><b>Intermediate (MPC)</b><br>Vision Jr College, Guntur (2018-2020)<br><span class="highlight">8.73 CGPA</span></li>
+                </ul>
             </div>
             <div class="card">
                 <h3><i class="fas fa-tools"></i> Skills</h3>
                 <div class="skills-tags">
                     <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">Java</span>
                     <span class="badge">Machine Learning</span> <span class="badge">Pandas</span> <span class="badge">Power BI</span>
-                    <span class="badge">Scikit-learn</span> <span class="badge">XGBoost</span> <span class="badge">REST API</span>
+                    <span class="badge">Scikit-learn</span> <span class="badge">XGBoost</span> <span class="badge">Matplotlib</span>
+                    <span class="badge">Seaborn</span> <span class="badge">Git</span> <span class="badge">REST API</span>
                 </div>
             </div>
             <div class="card">
-                <h3><i class="fas fa-star"></i> Extra-Curricular</h3>
+                <h3><i class="fas fa-heart"></i> Strengths</h3>
                 <ul>
+                    <li><span class="highlight">Quick-Witted</span> & Optimistic</li>
+                    <li>NSS Volunteer (2022-2024)</li>
                     <li>100+ Problems on HackerRank</li>
-                    <li>NSS Volunteer (2022-24)</li>
-                    <li>Strong Problem Solver</li>
                 </ul>
             </div>
         </div>
@@ -71,13 +75,21 @@
         <div class="experience-grid">
             <div class="card">
                 <h3>AI Intern</h3>
-                <p><b>DeviSkillHub</b> | Nov 2024 - Apr 2025</p>
-                <p>Built end-to-end ML pipelines and developed data cleaning pipelines using Scikit-learn and Pandas.</p>
+                <p><b>DeviSkillHub</b> | Nov 2024 – Apr 2025</p>
+                <ul>
+                    <li>Built end-to-end ML pipelines with EDA & feature engineering.</li>
+                    <li>Trained classification models using Scikit-learn.</li>
+                </ul>
+                <span class="badge">Python</span> <span class="badge">ML</span> <span class="badge">Pandas</span>
             </div>
             <div class="card">
                 <h3>AI Intern</h3>
-                <p><b>RoboCoupler</b> | Jul 2023 - Sep 2023</p>
-                <p>Analyzed datasets for classification models and collaborated with engineers for business alignment.</p>
+                <p><b>RoboCoupler</b> | Jul 2023 – Sep 2023</p>
+                <ul>
+                    <li>Analyzed datasets and developed prediction models.</li>
+                    <li>Collaborated with engineers for business alignment.</li>
+                </ul>
+                <span class="badge">Python</span> <span class="badge">Data Analysis</span>
             </div>
         </div>
     </div>
@@ -89,18 +101,18 @@
         <div class="projects-grid">
             <div class="card">
                 <h3>T20 World Cup Analytics</h3>
-                <p>Dream11 team selection using Python and Power BI.</p>
-                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank">View Dashboard</a>
+                <p>Built a Dream11 team using 2022 data. Reduced processing time by 50%.</p>
+                <a href="https://app.powerbi.com/groups/me/reports/e03806f9-4fde-4b07-b4d9-ea619f0a9219/ReportSectione99844b1d737dc440203?experience=power-bi" target="_blank">View Dashboard <i class="fas fa-external-link-alt"></i></a>
             </div>
             <div class="card">
-                <h3>Dynamic Pricing (RL)</h3>
-                <p>Increased revenue by 25% using Deep Q-Learning.</p>
-                <span class="badge">Reinforcement Learning</span>
+                <h3>Dynamic Pricing RL</h3>
+                <p>Implemented RL system increasing revenue by 25% and profits by 3.48%.</p>
+                <a href="1.jpg" target="_blank">Publication Certificate <i class="fas fa-certificate"></i></a>
             </div>
             <div class="card">
-                <h3>Uber Demand App</h3>
-                <p>Built a Streamlit app for ride optimization.</p>
-                <a href="https://driveruber.streamlit.app/" target="_blank">Open App</a>
+                <h3>Uber Demand Hub</h3>
+                <p>Streamlit app for ride demand analysis and driver insights.</p>
+                <a href="https://driveruber.streamlit.app/" target="_blank">View App <i class="fas fa-rocket"></i></a>
             </div>
         </div>
     </div>
@@ -111,20 +123,28 @@
         <h2 class="section-title">Certifications</h2>
         <div class="cert-grid">
             <div class="card cert-item">
-                <img src="aws.png">
-                <p>AWS Academy Graduate</p>
-            </div>
-            <div class="card cert-item">
-                <img src="SQL_HACKERRANK.png">
-                <p>SQL (Advanced) - HackerRank</p>
+                <img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png">
+                <p>Career Essentials in Data Analysis - Microsoft/LinkedIn</p>
             </div>
             <div class="card cert-item">
                 <img src="Python-Advance.jpg">
-                <p>Python Advance - Cutshort</p>
+                <p>Python Advance by Cutshort</p>
+            </div>
+            <div class="card cert-item">
+                <img src="Coding_ninjas.jpg">
+                <p>Codekaze AIR-665 - Coding Ninjas</p>
             </div>
             <div class="card cert-item">
                 <img src="Nptel.jpg">
-                <p>DBMS - NPTEL Swayam</p>
+                <p>DBMS by NPTEL Swayam</p>
+            </div>
+            <div class="card cert-item">
+                <img src="SQL_HACKERRANK.png">
+                <p>SQL (Advance) by HackerRank</p>
+            </div>
+            <div class="card cert-item">
+                <img src="aws.png">
+                <p>AWS Academy Cloud Foundations</p>
             </div>
         </div>
     </div>
@@ -132,12 +152,19 @@
 
 <section id="contact" class="section">
     <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-grid" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <div class="card">
-                <p><i class="fas fa-envelope"></i> abburiraviteja4@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +91 96187 60508</p>
-                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210">LinkedIn Profile</a></p>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-grid">
+            <div class="card contact-card">
+                <i class="fas fa-envelope"></i><br>
+                <a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a>
+            </div>
+            <div class="card contact-card">
+                <i class="fab fa-linkedin"></i><br>
+                <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn</a>
+            </div>
+            <div class="card contact-card">
+                <i class="fab fa-github"></i><br>
+                <a href="https://github.com/tejabburi3" target="_blank">GitHub</a>
             </div>
         </div>
     </div>
@@ -145,7 +172,7 @@
 
 <script>
 const nameText = "Hello, I’m Abburi Venkata Ravi Teja";
-const descText = "I'm an AI Intern passionate about Data Science.";
+const descText = "I'm a Data Science Engineer & ML Developer.";
 
 function animateText(text, elementId) {
     const el = document.getElementById(elementId);
@@ -155,8 +182,7 @@ function animateText(text, elementId) {
         span.textContent = word + " ";
         span.style.opacity = "0";
         span.style.display = "inline-block";
-        span.style.transform = "translateY(10px)";
-        span.style.animation = `fadeUp 0.4s forwards ${i * 0.1}s`;
+        span.style.animation = `wordFade 0.4s forwards ${i * 0.1}s`;
         el.appendChild(span);
     });
 }
@@ -171,10 +197,5 @@ function showSection(id) {
 
 window.onload = () => showSection('home');
 </script>
-
-<style>
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-</style>
-
 </body>
 </html>
