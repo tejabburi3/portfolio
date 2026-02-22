@@ -1,3 +1,4 @@
+/* Google Font: Plus Jakarta Sans (Modern & Professional) */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 :root {
@@ -25,14 +26,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Animated Background Mesh */
+/* Background Animation Mesh */
 body::before {
     content: "";
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(244, 63, 94, 0.08) 0px, transparent 50%);
+    background: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(244, 63, 94, 0.05) 0px, transparent 50%);
     z-index: -1;
 }
 
@@ -84,7 +85,7 @@ body::before {
 
 .hero-text { flex: 1.2; }
 
-.hero-text h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+.hero-text h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
 
 .gradient-text {
     background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -95,8 +96,7 @@ body::before {
 .hero-photo-container { flex: 0.8; display: flex; justify-content: center; }
 
 .hero-photo {
-    width: 380px;
-    height: 380px;
+    width: 350px; height: 350px;
     object-fit: cover;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     animation: blobify 8s ease-in-out infinite;
@@ -123,12 +123,12 @@ body::before {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 .card {
     background: var(--glass);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     padding: 35px;
     border-radius: 24px;
@@ -143,7 +143,7 @@ body::before {
 }
 
 .badge {
-    padding: 5px 14px;
+    padding: 6px 14px;
     background: rgba(99, 102, 241, 0.1);
     color: var(--primary);
     border-radius: 100px;
@@ -166,18 +166,30 @@ body::before {
     border: none;
 }
 
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2); }
-
-/* ================= CERTIFICATIONS & CONTACT ================= */
-.cert-card img {
+/* ================= CLEAN CERTIFICATION GRID ================= */
+.cert-img-container {
     width: 100%;
-    height: 160px;
-    object-fit: contain;
-    background: #f1f5f9;
-    border-radius: 12px;
+    height: 180px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     margin-bottom: 15px;
+    border: 1px solid #f1f5f9;
 }
 
+.cert-img-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.card:hover .cert-img-container img { transform: scale(1.1); }
+
+/* ================= CONTACT ================= */
 .contact-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -193,19 +205,19 @@ body::before {
     transition: 0.3s;
 }
 
-.contact-box i { font-size: 1.8rem; color: var(--primary); margin-bottom: 10px; }
+.contact-box i { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
 
-.contact-box a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; }
+.contact-box a { text-decoration: none; color: var(--text-dark); font-weight: 600; }
 
 .contact-box:hover { border-color: var(--primary); transform: translateY(-5px); }
 
-footer { text-align: center; padding: 40px; border-top: 1px solid var(--glass-border); color: var(--text-muted); }
+footer { text-align: center; padding: 50px; border-top: 1px solid var(--glass-border); color: var(--text-muted); }
 
 @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 900px) {
     .hero-content { flex-direction: column-reverse; text-align: center; }
     .hero-photo { width: 260px; height: 260px; }
-    .hero-text h1 { font-size: 2.5rem; }
+    .hero-text h1 { font-size: 2.2rem; }
     .nav-links { display: none; }
 }
