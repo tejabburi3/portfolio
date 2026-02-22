@@ -10,7 +10,7 @@
 <body>
 
 <nav class="navbar">
-    <img src="Logo.png" class="logo" alt="RAVI">
+    <img src="Logo.png" class="logo" onclick="showSection('home')" alt="Ravi">
     <ul class="nav-links">
         <li><a onclick="showSection('home')">Home</a></li>
         <li><a onclick="showSection('about')">About</a></li>
@@ -25,12 +25,12 @@
 <section id="home" class="hero">
     <div class="hero-content">
         <div class="hero-text">
-            <span class="badge">🚀 AI Intern</span>
+            <span class="badge">🚀 AI Engineer in the Making</span>
             <h1 id="animated-name"></h1>
-            <p id="animated-desc" style="font-size: 1.2rem; color: #64748b; margin-bottom: 30px;"></p>
+            <p id="animated-desc" style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px;"></p>
             <div style="display: flex; gap: 15px;">
-                <button class="btn" onclick="showSection('projects')">Explore Projects</button>
-                <button class="btn" style="background: white; color: var(--primary); border: 2px solid var(--primary);" onclick="showSection('contact')">Hire Me</button>
+                <button class="btn" onclick="showSection('projects')">See Projects</button>
+                <button class="btn" style="background:white; color:var(--primary); border:2px solid var(--primary);" onclick="showSection('contact')">Contact Me</button>
             </div>
         </div>
         <div class="hero-photo-container">
@@ -45,23 +45,22 @@
         <div class="grid">
             <div class="card">
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <p><b>B.Tech CSE - Data Science</b><br>Raghu Institute of Tech | 2020-2024<br><span class="badge">8.08 CGPA</span></p>
+                <p><b>B.Tech CSE (Data Science)</b><br>Raghu Institute of Technology (2020-24)<br><span class="badge">8.08 CGPA</span></p>
                 <hr style="margin: 15px 0; opacity: 0.1;">
-                <p><b>Intermediate (MPC)</b><br>Vision Jr College | 2018-2020<br><span class="badge">8.73 CGPA</span></p>
+                <p><b>Intermediate (MPC)</b><br>Vision Jr College, Guntur (2018-20)<br><span class="badge">8.73 CGPA</span></p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-microchip"></i> Tech Stack</h3>
+                <h3><i class="fas fa-code"></i> Tech Stack</h3>
                 <div class="skills">
-                    <span class="badge">Python</span> <span class="badge">SQL</span> 
-                    <span class="badge">Machine Learning</span> <span class="badge">Pandas</span>
-                    <span class="badge">Power BI</span> <span class="badge">Scikit-learn</span>
-                    <span class="badge">XGBoost</span> <span class="badge">REST APIs</span>
+                    <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">Machine Learning</span>
+                    <span class="badge">Pandas</span> <span class="badge">Power BI</span> <span class="badge">Scikit-learn</span>
+                    <span class="badge">XGBoost</span> <span class="badge">REST API</span> <span class="badge">Git</span>
                 </div>
             </div>
             <div class="card">
-                <h3><i class="fas fa-bolt"></i> Strengths</h3>
-                <p>100+ HackerRank Challenges Solved</p>
-                <p>NSS Volunteer (2022-24)</p>
+                <h3><i class="fas fa-star"></i> Achievements</h3>
+                <p><i class="fa fa-check text-primary"></i> 100+ HackerRank Problems Solved</p>
+                <p><i class="fa fa-check text-primary"></i> NSS Volunteer (2022-2024)</p>
                 <p><i class="fa fa-check text-primary"></i> Quick-Witted & Optimistic</p>
             </div>
         </div>
@@ -70,23 +69,17 @@
 
 <section id="experience" class="section">
     <div class="container">
-        <h2 class="section-title">Work <span class="gradient-text">Journey</span></h2>
+        <h2 class="section-title">Experience <span class="gradient-text">Timeline</span></h2>
         <div class="grid">
             <div class="card">
                 <h3>AI Intern @ DeviSkillHub</h3>
-                <p class="text-muted">Nov 2024 - Apr 2025</p>
-                <ul style="margin: 15px 0 0 20px;">
-                    <li>End-to-end ML pipelines & EDA</li>
-                    <li>Model optimization with Scikit-learn</li>
-                </ul>
+                <p class="text-muted">Nov 2024 – Apr 2025</p>
+                <p style="margin-top:10px;">End-to-end ML pipelines including EDA, feature engineering, and classification modeling.</p>
             </div>
             <div class="card">
                 <h3>AI Intern @ RoboCoupler</h3>
-                <p class="text-muted">Jul 2023 - Sep 2023</p>
-                <ul style="margin: 15px 0 0 20px;">
-                    <li>Dataset analysis for classification models</li>
-                    <li>Technical collaboration for business alignment</li>
-                </ul>
+                <p class="text-muted">Jul 2023 – Sep 2023</p>
+                <p style="margin-top:10px;">Analyzed datasets for classification and collaborated on engineering business solutions.</p>
             </div>
         </div>
     </div>
@@ -94,30 +87,90 @@
 
 <section id="projects" class="section">
     <div class="container">
-        <h2 class="section-title">Latest <span class="gradient-text">Projects</span></h2>
+        <h2 class="section-title">Latest <span class="gradient-text">Works</span></h2>
         <div class="grid">
             <div class="card">
-                <h3 style="color: var(--primary);">T20 World Cup Analytics</h3>
-                <p>Data-driven Dream11 selection using Python & Power BI.</p>
-                <a href="https://app.powerbi.com/groups/me/reports/e03806f9-4fde-4b07-b4d9-ea619f0a9219/ReportSectione99844b1d737dc440203?experience=power-bi" target="_blank" class="badge" style="text-decoration: none; margin-top: 15px;">Live Dashboard <i class="fa fa-link"></i></a>
+                <h3>T20 World Cup Analytics</h3>
+                <p>Dream11 team selection using Python & Power BI. Reduced processing by 50%.</p>
+                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank" class="badge" style="text-decoration:none;">View Dashboard</a>
             </div>
             <div class="card">
-                <h3 style="color: var(--secondary);">Dynamic Pricing RL</h3>
-                <p>Revenue increased by 25% using Reinforcement Learning models.</p>
-                <a href="1.jpg" target="_blank" class="badge" style="text-decoration: none; margin-top: 15px;">View Pub <i class="fa fa-file"></i></a>
+                <h3>Dynamic Pricing RL</h3>
+                <p>Revenue increased by 25% using Deep Q-Learning Reinforcement Learning.</p>
+                <a href="1.jpg" target="_blank" class="badge" style="text-decoration:none;">Publication Cert</a>
             </div>
             <div class="card">
-                <h3 style="color: var(--accent);">Uber Demand Hub</h3>
-                <p>Optimization tool for drivers built with Streamlit & Seaborn.</p>
-                <a href="https://driveruber.streamlit.app/" target="_blank" class="badge" style="text-decoration: none; margin-top: 15px;">Launch App <i class="fa fa-rocket"></i></a>
+                <h3>Uber Demand Hub</h3>
+                <p>Streamlit optimization app for ride analysis and driver insights.</p>
+                <a href="https://driveruber.streamlit.app/" target="_blank" class="badge" style="text-decoration:none;">Launch App</a>
             </div>
         </div>
     </div>
 </section>
 
+<section id="certifications" class="section">
+    <div class="container">
+        <h2 class="section-title">Certifications <span class="gradient-text">& Badges</span></h2>
+        <div class="grid">
+            <div class="card cert-card">
+                <img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png">
+                <p>Data Analysis - Microsoft/LinkedIn</p>
+            </div>
+            <div class="card cert-card">
+                <img src="Python-Advance.jpg">
+                <p>Python Advance - Cutshort</p>
+            </div>
+            <div class="card cert-card">
+                <img src="Coding_ninjas.jpg">
+                <p>Codekaze AIR-665 - Coding Ninjas</p>
+            </div>
+            <div class="card cert-card">
+                <img src="Nptel.jpg">
+                <p>DBMS - NPTEL Swayam</p>
+            </div>
+            <div class="card cert-card">
+                <img src="SQL_HACKERRANK.png">
+                <p>SQL (Advanced) - HackerRank</p>
+            </div>
+            <div class="card cert-card">
+                <img src="aws.png">
+                <p>Cloud Foundations - AWS Academy</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="contact-wrapper">
+            <div class="contact-box">
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a></p>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-linkedin"></i>
+                <p><a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn</a></p>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-github"></i>
+                <p><a href="https://github.com/tejabburi3" target="_blank">GitHub</a></p>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-whatsapp"></i>
+                <p><a href="https://wa.me/919618760508" target="_blank">WhatsApp</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Venkata Ravi Teja Abburi. Built with Modern Web Stack.</p>
+</footer>
+
 <script>
 const nameText = "Venkata Ravi Teja Abburi";
-const descText = "Architecting intelligence through Data Science and Machine Learning.";
+const descText = "Specializing in Machine Learning and Data Science Engineering.";
 
 function animateText(text, elementId) {
     const el = document.getElementById(elementId);
@@ -127,7 +180,7 @@ function animateText(text, elementId) {
         span.innerHTML = word + "&nbsp;";
         span.style.opacity = "0";
         span.style.display = "inline-block";
-        span.style.animation = `wordFade 0.5s forwards ${i * 0.1}s`;
+        span.style.animation = `slideUp 0.5s forwards ${i * 0.1}s`;
         if (i > 1) span.classList.add('gradient-text');
         el.appendChild(span);
     });
