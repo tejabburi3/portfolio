@@ -1,273 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio - Venkata Ravi Teja Abburi</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /> <!-- For icons -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkata Ravi Teja Abburi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- ================= NAVIGATION (Moved outside hero for better section switching) ================= -->
 <nav class="navbar">
-    <img src="Logo.png" class="logo" alt="Logo" />
+    <img src="Logo.png" class="logo" onclick="showSection('home')" alt="Logo">
     <ul class="nav-links">
-        <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#" onclick="showSection('about')"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="#" onclick="showSection('experience')"><i class="fas fa-briefcase"></i> Experience</a></li>
-        <li><a href="#" onclick="showSection('projects')"><i class="fas fa-project-diagram"></i> Projects</a></li>
-        <li><a href="#" onclick="showSection('certifications')"><i class="fas fa-certificate"></i> Certifications</a></li>
-        <li><a href="#" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('about')">About</a></li>
+        <li><a onclick="showSection('experience')">Experience</a></li>
+        <li><a onclick="showSection('projects')">Projects</a></li>
+        <li><a onclick="showSection('certifications')">Certifications</a></li>
+        <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
-    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Resume</a>
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
 </nav>
 
-<!-- ================= HERO ================-->
-<div class="hero">
-    <!-- HOME -->
-    <div id="home" class="hero-content">
+<section id="home" class="hero">
+    <div class="hero-content">
         <div class="hero-text">
-            <span class="title animate-float"><i class="fas fa-code"></i> Freelance Developer</span>
+            <span class="badge">🚀 AI & Data Science Engineer</span>
             <h1 id="animated-name"></h1>
             <p id="animated-desc"></p>
-            <a href="#about" class="scroll-down" onclick="showSection('about')"><i class="fas fa-chevron-down"></i></a>
+            <div style="display: flex; gap: 15px;">
+                <button class="btn" onclick="showSection('projects')">Explore Work</button>
+                <button class="btn" style="background:white; color:var(--primary); border:2px solid var(--primary);" onclick="showSection('contact')">Hire Me</button>
+            </div>
         </div>
         <div class="hero-photo-container">
-            <img src="me.jpg" alt="Abburi Venkata Ravi Teja" class="hero-photo" />
+            <img src="me.jpg" alt="Ravi Teja" class="hero-photo">
         </div>
     </div>
-</div>
+</section>
 
-<!-- About Section -->
-<div id="about" class="section about-section">
+<section id="about" class="section">
     <div class="container">
-        <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
-        <p class="about-intro">Hello! I am <b>Venkata Ravi Teja Abburi</b>, a passionate and self-driven individual from Guntur, Andhra Pradesh. I specialize in technology and data science, leveraging my strong technical and analytical skills to solve real-world problems.</p>
-        
-        <div class="about-grid">
-            <div class="about-item">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="grid">
+            <div class="card">
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <ul>
-                    <li><b>Bachelor of Technology</b> in Computer Science & Data Science Engineering<br />Raghu Institute of Technology, Visakhapatnam (2020 - 2024) - <b>8.08 CGPA</b></li>
-                    <li><b>Intermediate</b> - Maths, Physics & Chemistry<br />Vision Jr College, Guntur (2018 - 2020) - <b>8.73 CGPA</b></li>
-                </ul>
+                <p><b>B.Tech CSE - Data Science</b><br>Raghu Institute of Tech | 2020-2024<br><span class="badge">8.08 CGPA</span></p>
+                <hr style="margin: 15px 0; opacity: 0.1;">
+                <p><b>Intermediate (MPC)</b><br>Vision Jr College, Guntur | 2018-2020<br><span class="badge">8.73 CGPA</span></p>
             </div>
-            <div class="about-item">
-                <h3><i class="fas fa-tools"></i> Skills</h3>
-                <ul>
-                    <li><b>Programming:</b> Python, SQL, Java</li>
-                    <li><b>Machine Learning:</b> Classification Models, Feature Engineering, Model Optimization, Time-Series Cross-Validation</li>
-                    <li><b>Frameworks:</b> Scikit-learn, XGBoost</li>
-                    <li><b>Data Analysis:</b> Pandas, NumPy, Matplotlib, Seaborn, Power BI</li>
-                    <li><b>Other:</b> SHAP, REST API, Jupyter, VS Code, Git</li>
-                </ul>
-            </div>
-            <div class="about-item">
-                <h3><i class="fas fa-heart"></i> Hobbies & Strengths</h3>
-                <ul>
-                    <li>Hobbies: Playing cricket, Watching movies, Listening to music</li>
-                    <li>Strengths: <span class="highlight">Optimistic</span> and <span class="highlight">Quick-Witted</span>, Strong problem-solving</li>
-                </ul>
-            </div>
-            <div class="about-item">
-                <h3><i class="fas fa-users"></i> Extra-Curricular</h3>
-                <ul>
-                    <li>Solved 100+ problems on HackerRank</li>
-                    <li>NSS Volunteer (2022-2024), demonstrating leadership and teamwork</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Work Experience Section -->
-<div id="experience" class="section experience-section">
-    <div class="container">
-        <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
-        <div class="experience-grid">
-            <div class="experience-card">
-                <h3>AI Intern</h3>
-                <span class="company"><i class="fas fa-building"></i> DeviSkillHub · Remote</span>
-                <span class="duration"><i class="fas fa-calendar"></i> Nov 2024 – Apr 2025</span>
-                <ul>
-                    <li>Built end-to-end ML pipelines with data preprocessing, EDA, and feature engineering.</li>
-                    <li>Trained/evaluated classification models using Scikit-learn.</li>
-                    <li>Developed data validation/cleaning pipelines.</li>
-                </ul>
-                <div class="tech-stack">
-                    <b>Tech Stack:</b> <span class="badge">Python</span> <span class="badge">ML</span> <span class="badge">Pandas</span>
+            <div class="card">
+                <h3><i class="fas fa-tools"></i> Core Skills</h3>
+                <div class="skills">
+                    <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">Machine Learning</span>
+                    <span class="badge">Pandas</span> <span class="badge">Power BI</span> <span class="badge">Scikit-learn</span>
+                    <span class="badge">XGBoost</span> <span class="badge">REST API</span> <span class="badge">Git</span>
                 </div>
             </div>
-            <div class="experience-card">
+            <div class="card">
+                <h3><i class="fas fa-heart"></i> Strengths</h3>
+                <p><i class="fa fa-check text-primary"></i> Quick-Witted & Optimistic</p>
+                <p><i class="fa fa-check text-primary"></i> 100+ HackerRank Challenges</p>
+                <p><i class="fa fa-check text-primary"></i> NSS Volunteer (2022-2024)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+        <div class="grid">
+            <div class="card">
                 <h3>AI Intern</h3>
-                <span class="company"><i class="fas fa-building"></i> RoboCoupler · Remote</span>
-                <span class="duration"><i class="fas fa-calendar"></i> Jul 2023 – Sep 2023</span>
-                <ul>
-                    <li>Analyzed datasets and developed ML models for prediction/classification.</li>
-                    <li>Performed feature selection, tuning, and evaluation.</li>
-                    <li>Collaborated with engineers for business alignment.</li>
-                </ul>
-                <div class="tech-stack">
-                    <b>Tech Stack:</b> <span class="badge">Python</span> <span class="badge">ML</span> <span class="badge">Data Analysis</span>
-                </div>
+                <p class="text-muted">DeviSkillHub | Nov 2024 – Apr 2025</p>
+                <p style="margin-top:10px;">Built end-to-end ML pipelines with EDA & feature engineering. Trained classification models using Scikit-learn.</p>
+            </div>
+            <div class="card">
+                <h3>AI Intern</h3>
+                <p class="text-muted">RoboCoupler | Jul 2023 – Sep 2023</p>
+                <p style="margin-top:10px;">Analyzed datasets and developed prediction models. Collaborated with engineers for business alignment.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Portfolio Section -->
-<div id="projects" class="section projects-section">
+<section id="projects" class="section">
     <div class="container">
-        <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
-        <p>Here are some of my recent projects.</p>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>T20 World Cup Cricket Data Analytics</h3>
-                <p>Performed analytics on T20 World Cup 2022 data to build a Dream11 team. Engineered data pipelines using Python/Pandas, reducing processing time by 50%.</p>
-                <a href="https://app.powerbi.com/groups/me/reports/e03806f9-4fde-4b07-b4d9-ea619f0a9219/ReportSectione99844b1d737dc440203?experience=power-bi" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Dashboard</a>
-                <div class="tags"><span class="tag">Python</span> <span class="tag">Pandas</span> <span class="tag">Power BI</span></div>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>T20 World Cup Analytics</h3>
+                <p>Built a Dream11 team using 2022 data. Reduced processing time by 50%.</p>
+                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">View Dashboard</a>
             </div>
-            <div class="project-card">
-                <h3>Dynamic Pricing Strategy Using Reinforcement Learning</h3>
-                <p>Implemented a dynamic pricing system with RL, increasing revenue by 25% and profits by 3.48%.</p>
-                <a href="1.jpg" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Publication Certificate</a>
-                <div class="tags"><span class="tag">RL</span> <span class="tag">Python</span> <span class="tag">Deep Q-Learning</span></div>
+            <div class="card">
+                <h3>Dynamic Pricing RL</h3>
+                <p>Implemented RL system increasing revenue by 25% and profits by 3.48%.</p>
+                <a href="1.jpg" target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">Publication</a>
             </div>
-            <div class="project-card">
-                <h3>RideDemand-Supply Optimization Hub - Uber</h3>
-                <p>Built a Streamlit app for ride demand analysis, with login and insights for drivers.</p>
-                <a href="https://driveruber.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View App</a>
-                <div class="tags"><span class="tag">Streamlit</span> <span class="tag">Python</span> <span class="tag">Seaborn</span></div>
+            <div class="card">
+                <h3>Uber Demand Hub</h3>
+                <p>Streamlit app for ride demand analysis and driver insights.</p>
+                <a href="https://driveruber.streamlit.app/" target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">Launch App</a>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Certifications -->
-<div id="certifications" class="section certifications-section">
+<section id="certifications" class="section">
     <div class="container">
-        <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+        <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
         <div class="cert-grid">
-            <div class="cert-item">
-                <img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png" alt="Career Essentials Certificate" />
-                <p>Career Essentials in Data Analysis by Microsoft and LinkedIn</p>
+            
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png"></div>
+                <h4>Data Analysis Essentials</h4>
+                <span class="badge">Microsoft & LinkedIn</span>
             </div>
-            <div class="cert-item">
-                <img src="Python-Advance.jpg" alt="Python Advance Certificate" />
-                <p>Python Advance by Cutshort</p>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="Python-Advance.jpg"></div>
+                <h4>Python Advanced</h4>
+                <span class="badge">Cutshort</span>
             </div>
-            <div class="cert-item">
-                <img src="Coding_ninjas.jpg" alt="Codekaze Certificate" />
-                <p>Certificate of Achievement of Codekaze (All India Rank-665) -- Coding Ninjas</p>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="Coding_ninjas.jpg"></div>
+                <h4>Codekaze AIR-665</h4>
+                <span class="badge">Coding Ninjas</span>
             </div>
-            <div class="cert-item">
-                <img src="Nptel.jpg" alt="NPTEL Certificate" />
-                <p>Database Management System by NPTEL Swayam</p>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="Nptel.jpg"></div>
+                <h4>Database Management (DBMS)</h4>
+                <span class="badge">NPTEL Swayam</span>
             </div>
-            <div class="cert-item">
-                <img src="SQL_HACKERRANK.png" alt="SQL Certificate" />
-                <p>SQL (Advance) by HackerRank</p>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="SQL_HACKERRANK.png"></div>
+                <h4>SQL (Advanced)</h4>
+                <span class="badge">HackerRank</span>
             </div>
-            <div class="cert-item">
-                <img src="aws.png" alt="AWS Certificate" />
-                <p>AWS Academy Graduate - AWS Academy Cloud Foundations</p>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="aws.png"></div>
+                <h4>Cloud Foundations</h4>
+                <span class="badge">AWS Academy</span>
             </div>
+
         </div>
     </div>
-</div>
+</section>
 
-<!-- Contact Section -->
-<div id="contact" class="section contact-section">
+<section id="contact" class="section">
     <div class="container">
-        <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
-        <div class="contact-grid">
-            <div class="contact-item">
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="contact-wrapper">
+            <div class="contact-box">
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a>
+                <p><a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a></p>
             </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <a href="tel:+919618760508">+91 96187 60508</a>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-whatsapp"></i>
-                <a href="https://wa.me/919618760508" target="_blank">WhatsApp</a>
-            </div>
-            <div class="contact-item">
+            <div class="contact-box">
                 <i class="fab fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn</a>
+                <p><a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn Profile</a></p>
             </div>
-            <div class="contact-item">
+            <div class="contact-box">
                 <i class="fab fa-github"></i>
-                <a href="https://github.com/tejabburi3" target="_blank">GitHub</a>
+                <p><a href="https://github.com/tejabburi3" target="_blank">GitHub Projects</a></p>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-whatsapp"></i>
+                <p><a href="https://wa.me/919618760508" target="_blank">WhatsApp Me</a></p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Footer -->
 <footer>
-    <p>&copy; 2023 Venkata Ravi Teja Abburi. All rights reserved.</p>
+    <p>&copy; 2026 Venkata Ravi Teja Abburi | Designed with Modern Tech Stack</p>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
 <script>
-const nameText = "Hello, I’m Abburi Venkata Ravi Teja";
-const descText = "I'm passionate about technology and data science.";
+const nameText = "Venkata Ravi Teja Abburi";
+const descText = "Specializing in Data Science Engineering & Machine Learning.";
 
-function animateText(text, elementId, delay = 150) {
+function animateText(text, elementId) {
     const el = document.getElementById(elementId);
     el.innerHTML = "";
-    el.classList.add("typing");
     text.split(" ").forEach((word, i) => {
         const span = document.createElement("span");
-        span.textContent = word + " ";
-        span.style.animationDelay = `${i * delay}ms`;
+        span.innerHTML = word + "&nbsp;";
+        span.style.opacity = "0";
+        span.style.display = "inline-block";
+        span.style.animation = `slideUp 0.5s forwards ${i * 0.1}s`;
+        if (i > 1) span.classList.add('gradient-text');
         el.appendChild(span);
     });
 }
 
-function showSection(sectionId) {
-    // Hide all sections and hero content
-    document.querySelectorAll(".section, .hero-content, .hero").forEach(sec => sec.style.display = "none");
-    
-    if (sectionId === "home") {
-        // Show hero and home content
-        document.querySelector(".hero").style.display = "block";
-        document.getElementById("home").style.display = "flex";
-        animateText(nameText, "animated-name", 180);
-        animateText(descText, "animated-desc", 140);
-    } else {
-        // Show the selected section (hero is hidden, so no blank space)
-        document.getElementById(sectionId).style.display = "block";
+function showSection(id) {
+    document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
+    const target = document.getElementById(id);
+    target.style.display = (id === 'home') ? 'flex' : 'block';
+    if(id === 'home') { 
+        animateText(nameText, 'animated-name'); 
+        animateText(descText, 'animated-desc'); 
     }
-    // Removed scrollTo to prevent any scrolling behavior
+    window.scrollTo(0,0);
 }
 
-function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    showSection("home");
-    // Add fade-in on scroll (optional, but kept for sections if they extend below viewport)
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-            }
-        });
-    });
-    document.querySelectorAll('.section').forEach(section => observer.observe(section));
-});
+window.onload = () => showSection('home');
 </script>
+
 </body>
 </html>
-
-
