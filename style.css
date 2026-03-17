@@ -95,6 +95,18 @@ body::before {
     transition: 0.3s;
 }
 
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -5px);
+}
+
 /* ===== HERO ===== */
 .hero {
     min-height: 100vh;
@@ -153,6 +165,13 @@ body::before {
     border-radius: 50%;
     border: 6px solid white;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
 }
 
 /* ===== SECTIONS ===== */
@@ -178,6 +197,10 @@ body::before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
 }
 
 /* ===== CARD ===== */
@@ -294,12 +317,12 @@ footer {
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 5%;
-        flex-wrap: wrap;
     }
 
+    /* MOBILE NAVBAR - VERTICAL COLUMN */
     .nav-links {
         display: none;
-        flex-direction: column;
+        flex-direction: column !important;
         position: absolute;
         top: 100%;
         left: 0;
@@ -308,17 +331,20 @@ footer {
         backdrop-filter: blur(20px);
         padding: 20px 5%;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        gap: 15px;
+        gap: 0;
+        margin: 0;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-links a {
-        font-size: 1rem;
-        padding: 10px 0;
+        font-size: 1.1rem;
+        padding: 15px 0;
         border-bottom: 1px solid rgba(0,0,0,0.1);
+        text-align: center;
+        width: 100%;
     }
 
     .nav-links a:last-child {
@@ -342,6 +368,7 @@ footer {
     .hero-photo {
         width: 220px;
         height: 220px;
+        animation: float 6s ease-in-out infinite;
     }
 
     .section {
@@ -357,11 +384,6 @@ footer {
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .hero-text .btn {
-        padding: 12px 20px;
-        font-size: 0.9rem;
     }
 }
 
@@ -382,7 +404,7 @@ img {
     height: auto;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== TEXT ANIMATIONS ===== */
 @keyframes slideUp {
     from {
         opacity: 0;
