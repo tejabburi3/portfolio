@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkata Ravi Teja Abburi | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Venkata Ravi Teja Abburi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
+<div class="main-container">
+
+<!-- NAVBAR -->
 <nav class="navbar">
-    <img src="Logo.png" class="logo" onclick="showSection('home')" alt="Logo">
+    <h2 class="logo">Ravi Teja</h2>
     <ul class="nav-links">
         <li><a onclick="showSection('home')">Home</a></li>
         <li><a onclick="showSection('about')">About</a></li>
@@ -21,196 +27,143 @@
     </ul>
     <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
 </nav>
-    
+
+<!-- HERO -->
 <section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <span class="badge">🚀 AI & Data Science Engineer</span>
-            <h1 id="animated-name"></h1>
-            <p id="animated-desc"></p>
-            <div style="display: flex; gap: 15px;">
-                <button class="btn" onclick="showSection('projects')">Explore Work</button>
-                <button class="btn" style="background:white; color:var(--primary); border:2px solid var(--primary);" onclick="showSection('contact')">Hire Me</button>
-            </div>
+    <div class="hero-text">
+        <span class="badge">🚀 AI & Data Science Engineer</span>
+        <h1>Venkata Ravi Teja Abburi</h1>
+        <p>
+            Specializing in Data Science, Machine Learning & AI solutions.
+            Passionate about solving real-world problems with data.
+        </p>
+
+        <button class="btn" onclick="showSection('projects')">Explore Work</button>
+
+        <!-- STATS -->
+        <div class="stats">
+            <div><h3>1+</h3><p>Experience</p></div>
+            <div><h3>5+</h3><p>Projects</p></div>
+            <div><h3>3+</h3><p>Certifications</p></div>
         </div>
-        <div class="hero-photo-container">
-            <img src="me.jpg" alt="Ravi Teja" class="hero-photo">
-        </div>
+    </div>
+
+    <div class="hero-photo-container">
+        <img src="me.jpg" class="hero-photo">
     </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section">
-    <div class="container">
-        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <p><b>B.Tech CSE - Data Science</b><br>Raghu Institute of Tech | 2020-2024<br><span class="badge">8.08 CGPA</span></p>
-                <hr style="margin: 15px 0; opacity: 0.1;">
-                <p><b>Intermediate (MPC)</b><br>Vision Jr College, Guntur | 2018-2020<br><span class="badge">8.73 CGPA</span></p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-tools"></i> Core Skills</h3>
-                <div class="skills">
-                    <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">Machine Learning</span>
-                    <span class="badge">Pandas</span> <span class="badge">Power BI</span> <span class="badge">Scikit-learn</span>
-                    <span class="badge">XGBoost</span> <span class="badge">REST API</span> <span class="badge">Git</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-heart"></i> Strengths</h3>
-                <p><i class="fa fa-check text-primary"></i> Quick-Witted & Optimistic</p>
-                <p><i class="fa fa-check text-primary"></i> 100+ HackerRank Challenges</p>
-                <p><i class="fa fa-check text-primary"></i> NSS Volunteer (2022-2024)</p>
-            </div>
+    <h2>About Me</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Education</h3>
+            <p><b>B.Tech CSE - Data Science</b><br>Raghu Institute of Tech (2020-2024)<br>8.08 CGPA</p>
+            <br>
+            <p><b>Intermediate (MPC)</b><br>Vision Jr College (2018-2020)<br>8.73 CGPA</p>
         </div>
+
+        <div class="card">
+            <h3>Skills</h3>
+            <p>Python, SQL, Machine Learning, Pandas, Power BI, Scikit-learn, XGBoost, REST API, Git</p>
+        </div>
+
+        <div class="card">
+            <h3>Strengths</h3>
+            <p>✔ Quick-Witted<br>✔ 100+ HackerRank Problems<br>✔ NSS Volunteer</p>
+        </div>
+
     </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience" class="section">
-    <div class="container">
-        <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3>AI Intern</h3>
-                <p class="text-muted">DeviSkillHub | Nov 2024 – Apr 2025</p>
-                <p style="margin-top:10px;">Built end-to-end ML pipelines with EDA & feature engineering. Trained classification models using Scikit-learn.</p>
-            </div>
-            <div class="card">
-                <h3>AI Intern</h3>
-                <p class="text-muted">RoboCoupler | Jul 2023 – Sep 2023</p>
-                <p style="margin-top:10px;">Analyzed datasets and developed prediction models. Collaborated with engineers for business alignment.</p>
-            </div>
+    <h2>Experience</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>AI Intern</h3>
+            <p>DeviSkillHub (Nov 2024 – Apr 2025)</p>
+            <p>Built ML pipelines & classification models.</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Intern</h3>
+            <p>RoboCoupler (Jul 2023 – Sep 2023)</p>
+            <p>Worked on prediction models & data analysis.</p>
         </div>
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="section">
-    <div class="container">
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3>T20 World Cup Analytics</h3>
-                <p>Built a Dream11 team using 2022 data. Reduced processing time by 50%.</p>
-                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">View Dashboard</a>
-            </div>
-            <div class="card">
-                <h3>Dynamic Pricing RL</h3>
-                <p>Implemented RL system increasing revenue by 25% and profits by 3.48%.</p>
-                <a href="1.jpg" target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">Publication</a>
-            </div>
-            <div class="card">
-                <h3>Uber Demand Hub</h3>
-                <p>Streamlit app for ride demand analysis and driver insights.</p>
-                <a href="https://driveruber.streamlit.app/" target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">Launch App</a>
-            </div>
+    <h2>Projects</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>T20 Analytics</h3>
+            <p>Built Dream11 team using data analytics.</p>
         </div>
+
+        <div class="card">
+            <h3>Dynamic Pricing RL</h3>
+            <p>Increased revenue using reinforcement learning.</p>
+        </div>
+
+        <div class="card">
+            <h3>Uber Demand Hub</h3>
+            <p>Streamlit app for demand analysis.</p>
+        </div>
+
     </div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section id="certifications" class="section">
-    <div class="container">
-        <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
-        <div class="cert-grid">
-            
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png"></div>
-                <h4>Data Analysis Essentials</h4>
-                <span class="badge">Microsoft & LinkedIn</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="Python-Advance.jpg"></div>
-                <h4>Python Advanced</h4>
-                <span class="badge">Cutshort</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="Coding_ninjas.jpg"></div>
-                <h4>Codekaze AIR-665</h4>
-                <span class="badge">Coding Ninjas</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="Nptel.jpg"></div>
-                <h4>Database Management (DBMS)</h4>
-                <span class="badge">NPTEL Swayam</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="SQL_HACKERRANK.png"></div>
-                <h4>SQL (Advanced)</h4>
-                <span class="badge">HackerRank</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="aws.png"></div>
-                <h4>Cloud Foundations</h4>
-                <span class="badge">AWS Academy</span>
-            </div>
-
-        </div>
+    <h2>Certifications</h2>
+    <div class="grid">
+        <div class="card">Microsoft Data Analysis</div>
+        <div class="card">Python Advanced</div>
+        <div class="card">Codekaze AIR-665</div>
+        <div class="card">DBMS NPTEL</div>
+        <div class="card">SQL HackerRank</div>
+        <div class="card">AWS Cloud</div>
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
-    <div class="container">
-        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
-        <div class="contact-wrapper">
-            <div class="contact-box">
-                <i class="fas fa-envelope"></i>
-                <p><a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a></p>
-            </div>
-            <div class="contact-box">
-                <i class="fab fa-linkedin"></i>
-                <p><a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn Profile</a></p>
-            </div>
-            <div class="contact-box">
-                <i class="fab fa-github"></i>
-                <p><a href="https://github.com/tejabburi3" target="_blank">GitHub Projects</a></p>
-            </div>
-            <div class="contact-box">
-                <i class="fab fa-whatsapp"></i>
-                <p><a href="https://wa.me/919618760508" target="_blank">WhatsApp Me</a></p>
-            </div>
+    <h2>Contact</h2>
+    <div class="grid">
+
+        <div class="card">
+            📧 abburiraviteja4@gmail.com
         </div>
+
+        <div class="card">
+            🔗 LinkedIn
+        </div>
+
+        <div class="card">
+            💻 GitHub
+        </div>
+
+        <div class="card">
+            📱 WhatsApp
+        </div>
+
     </div>
 </section>
 
-<footer>
-    <p>&copy; 2026 Venkata Ravi Teja Abburi | Designed with Modern Tech Stack</p>
-</footer>
+</div>
 
 <script>
-const nameText = "Venkata Ravi Teja Abburi";
-const descText = "Specializing in Data Science Engineering & Machine Learning.";
-
-function animateText(text, elementId) {
-    const el = document.getElementById(elementId);
-    el.innerHTML = "";
-    text.split(" ").forEach((word, i) => {
-        const span = document.createElement("span");
-        span.innerHTML = word + "&nbsp;";
-        span.style.opacity = "0";
-        span.style.display = "inline-block";
-        span.style.animation = `slideUp 0.5s forwards ${i * 0.1}s`;
-        if (i > 1) span.classList.add('gradient-text');
-        el.appendChild(span);
-    });
-}
-
 function showSection(id) {
-    document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
-    const target = document.getElementById(id);
-    target.style.display = (id === 'home') ? 'flex' : 'block';
-    if(id === 'home') { 
-        animateText(nameText, 'animated-name'); 
-        animateText(descText, 'animated-desc'); 
-    }
-    window.scrollTo(0,0);
+    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+    document.getElementById(id).style.display = 'flex';
 }
-
-window.onload = () => showSection('home');
+showSection('home');
 </script>
 
 </body>
