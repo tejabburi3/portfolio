@@ -11,19 +11,14 @@
 
 <nav class="navbar">
     <img src="Logo.png" class="logo" onclick="showSection('home')" alt="Logo">
-    <ul class="nav-links" id="navLinks">
-        <li><a onclick="showSection('home'); toggleMenu()">Home</a></li>
-        <li><a onclick="showSection('about'); toggleMenu()">About</a></li>
-        <li><a onclick="showSection('experience'); toggleMenu()">Experience</a></li>
-        <li><a onclick="showSection('projects'); toggleMenu()">Projects</a></li>
-        <li><a onclick="showSection('certifications'); toggleMenu()">Certifications</a></li>
-        <li><a onclick="showSection('contact'); toggleMenu()">Contact</a></li>
+    <ul class="nav-links">
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('about')">About</a></li>
+        <li><a onclick="showSection('experience')">Experience</a></li>
+        <li><a onclick="showSection('projects')">Projects</a></li>
+        <li><a onclick="showSection('certifications')">Certifications</a></li>
+        <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
-    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
     <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
 </nav>
     
@@ -117,6 +112,7 @@
     <div class="container">
         <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
         <div class="cert-grid">
+            
             <div class="card cert-card">
                 <div class="cert-img-container"><img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png"></div>
                 <h4>Data Analysis Essentials</h4>
@@ -130,4 +126,93 @@
             </div>
 
             <div class="card cert-card">
-                <div class="cert-img-container"><img src
+                <div class="cert-img-container"><img src="Coding_ninjas.jpg"></div>
+                <h4>Codekaze AIR-665</h4>
+                <span class="badge">Coding Ninjas</span>
+            </div>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="Nptel.jpg"></div>
+                <h4>Database Management (DBMS)</h4>
+                <span class="badge">NPTEL Swayam</span>
+            </div>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="SQL_HACKERRANK.png"></div>
+                <h4>SQL (Advanced)</h4>
+                <span class="badge">HackerRank</span>
+            </div>
+
+            <div class="card cert-card">
+                <div class="cert-img-container"><img src="aws.png"></div>
+                <h4>Cloud Foundations</h4>
+                <span class="badge">AWS Academy</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="contact-wrapper">
+            <div class="contact-box">
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a></p>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-linkedin"></i>
+                <p><a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn Profile</a></p>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-github"></i>
+                <p><a href="https://github.com/tejabburi3" target="_blank">GitHub Projects</a></p>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-whatsapp"></i>
+                <p><a href="https://wa.me/919618760508" target="_blank">WhatsApp Me</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Venkata Ravi Teja Abburi | Designed with Modern Tech Stack</p>
+</footer>
+
+<script>
+const nameText = "Venkata Ravi Teja Abburi";
+const descText = "Specializing in Data Science Engineering & Machine Learning.";
+
+function animateText(text, elementId) {
+    const el = document.getElementById(elementId);
+    el.innerHTML = "";
+    text.split(" ").forEach((word, i) => {
+        const span = document.createElement("span");
+        span.innerHTML = word + "&nbsp;";
+        span.style.opacity = "0";
+        span.style.display = "inline-block";
+        span.style.animation = `slideUp 0.5s forwards ${i * 0.1}s`;
+        if (i > 1) span.classList.add('gradient-text');
+        el.appendChild(span);
+    });
+}
+
+function showSection(id) {
+    document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
+    const target = document.getElementById(id);
+    target.style.display = (id === 'home') ? 'flex' : 'block';
+    if(id === 'home') { 
+        animateText(nameText, 'animated-name'); 
+        animateText(descText, 'animated-desc'); 
+    }
+    window.scrollTo(0,0);
+}
+
+window.onload = () => showSection('home');
+</script>
+
+</body>
+</html>
+
