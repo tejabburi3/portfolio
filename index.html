@@ -11,14 +11,19 @@
 
 <nav class="navbar">
     <img src="Logo.png" class="logo" onclick="showSection('home')" alt="Logo">
-    <ul class="nav-links">
-        <li><a onclick="showSection('home')">Home</a></li>
-        <li><a onclick="showSection('about')">About</a></li>
-        <li><a onclick="showSection('experience')">Experience</a></li>
-        <li><a onclick="showSection('projects')">Projects</a></li>
-        <li><a onclick="showSection('certifications')">Certifications</a></li>
-        <li><a onclick="showSection('contact')">Contact</a></li>
+    <ul class="nav-links" id="navLinks">
+        <li><a onclick="showSection('home'); toggleMenu()">Home</a></li>
+        <li><a onclick="showSection('about'); toggleMenu()">About</a></li>
+        <li><a onclick="showSection('experience'); toggleMenu()">Experience</a></li>
+        <li><a onclick="showSection('projects'); toggleMenu()">Projects</a></li>
+        <li><a onclick="showSection('certifications'); toggleMenu()">Certifications</a></li>
+        <li><a onclick="showSection('contact'); toggleMenu()">Contact</a></li>
     </ul>
+    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
 </nav>
     
@@ -27,8 +32,8 @@
         <div class="hero-text">
             <span class="badge">🚀 AI & Data Science Engineer</span>
             <h1 id="animated-name"></h1>
-            <p id="animated-desc"></p>
-            <div style="display: flex; gap: 15px;">
+            <p id="animated-desc" style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px;"></p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
                 <button class="btn" onclick="showSection('projects')">Explore Work</button>
                 <button class="btn" style="background:white; color:var(--primary); border:2px solid var(--primary);" onclick="showSection('contact')">Hire Me</button>
             </div>
@@ -51,17 +56,23 @@
             </div>
             <div class="card">
                 <h3><i class="fas fa-tools"></i> Core Skills</h3>
-                <div class="skills">
-                    <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">Machine Learning</span>
-                    <span class="badge">Pandas</span> <span class="badge">Power BI</span> <span class="badge">Scikit-learn</span>
-                    <span class="badge">XGBoost</span> <span class="badge">REST API</span> <span class="badge">Git</span>
+                <div class="skills" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="badge">Python</span> 
+                    <span class="badge">SQL</span> 
+                    <span class="badge">Machine Learning</span>
+                    <span class="badge">Pandas</span> 
+                    <span class="badge">Power BI</span> 
+                    <span class="badge">Scikit-learn</span>
+                    <span class="badge">XGBoost</span> 
+                    <span class="badge">REST API</span> 
+                    <span class="badge">Git</span>
                 </div>
             </div>
             <div class="card">
                 <h3><i class="fas fa-heart"></i> Strengths</h3>
-                <p><i class="fa fa-check text-primary"></i> Quick-Witted & Optimistic</p>
-                <p><i class="fa fa-check text-primary"></i> 100+ HackerRank Challenges</p>
-                <p><i class="fa fa-check text-primary"></i> NSS Volunteer (2022-2024)</p>
+                <p><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> Quick-Witted & Optimistic</p>
+                <p><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> 100+ HackerRank Challenges</p>
+                <p><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> NSS Volunteer (2022-2024)</p>
             </div>
         </div>
     </div>
@@ -73,12 +84,12 @@
         <div class="grid">
             <div class="card">
                 <h3>AI Intern</h3>
-                <p class="text-muted">DeviSkillHub | Nov 2024 – Apr 2025</p>
+                <p class="text-muted" style="font-size: 0.9rem; color: var(--text-muted);">DeviSkillHub | Nov 2024 – Apr 2025</p>
                 <p style="margin-top:10px;">Built end-to-end ML pipelines with EDA & feature engineering. Trained classification models using Scikit-learn.</p>
             </div>
             <div class="card">
                 <h3>AI Intern</h3>
-                <p class="text-muted">RoboCoupler | Jul 2023 – Sep 2023</p>
+                <p class="text-muted" style="font-size: 0.9rem; color: var(--text-muted);">RoboCoupler | Jul 2023 – Sep 2023</p>
                 <p style="margin-top:10px;">Analyzed datasets and developed prediction models. Collaborated with engineers for business alignment.</p>
             </div>
         </div>
@@ -92,12 +103,12 @@
             <div class="card">
                 <h3>T20 World Cup Analytics</h3>
                 <p>Built a Dream11 team using 2022 data. Reduced processing time by 50%.</p>
-                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">View Dashboard</a>
+                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank" class="badge" style="text-decoration:none; margin-top:15px; background: var(--secondary);">View Dashboard</a>
             </div>
             <div class="card">
                 <h3>Dynamic Pricing RL</h3>
                 <p>Implemented RL system increasing revenue by 25% and profits by 3.48%.</p>
-                <a href="1.jpg" target="_blank" class="badge" style="text-decoration:none; margin-top:15px;">Publication</a>
+                <a href="1.jpg" target="_blank" class="badge" style="text-decoration:none; margin-top:15px; background: var(--accent);">Publication</a>
             </div>
             <div class="card">
                 <h3>Uber Demand Hub</h3>
@@ -112,108 +123,16 @@
     <div class="container">
         <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
         <div class="cert-grid">
-            
             <div class="card cert-card">
                 <div class="cert-img-container"><img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png"></div>
                 <h4>Data Analysis Essentials</h4>
                 <span class="badge">Microsoft & LinkedIn</span>
             </div>
-
             <div class="card cert-card">
                 <div class="cert-img-container"><img src="Python-Advance.jpg"></div>
                 <h4>Python Advanced</h4>
                 <span class="badge">Cutshort</span>
             </div>
-
             <div class="card cert-card">
                 <div class="cert-img-container"><img src="Coding_ninjas.jpg"></div>
-                <h4>Codekaze AIR-665</h4>
-                <span class="badge">Coding Ninjas</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="Nptel.jpg"></div>
-                <h4>Database Management (DBMS)</h4>
-                <span class="badge">NPTEL Swayam</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="SQL_HACKERRANK.png"></div>
-                <h4>SQL (Advanced)</h4>
-                <span class="badge">HackerRank</span>
-            </div>
-
-            <div class="card cert-card">
-                <div class="cert-img-container"><img src="aws.png"></div>
-                <h4>Cloud Foundations</h4>
-                <span class="badge">AWS Academy</span>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="section">
-    <div class="container">
-        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
-        <div class="contact-wrapper">
-            <div class="contact-box">
-                <i class="fas fa-envelope"></i>
-                <p><a href="mailto:abburiraviteja4@gmail.com">abburiraviteja4@gmail.com</a></p>
-            </div>
-            <div class="contact-box">
-                <i class="fab fa-linkedin"></i>
-                <p><a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank">LinkedIn Profile</a></p>
-            </div>
-            <div class="contact-box">
-                <i class="fab fa-github"></i>
-                <p><a href="https://github.com/tejabburi3" target="_blank">GitHub Projects</a></p>
-            </div>
-            <div class="contact-box">
-                <i class="fab fa-whatsapp"></i>
-                <p><a href="https://wa.me/919618760508" target="_blank">WhatsApp Me</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Venkata Ravi Teja Abburi | Designed with Modern Tech Stack</p>
-</footer>
-
-<script>
-const nameText = "Venkata Ravi Teja Abburi";
-const descText = "Specializing in Data Science Engineering & Machine Learning.";
-
-function animateText(text, elementId) {
-    const el = document.getElementById(elementId);
-    el.innerHTML = "";
-    text.split(" ").forEach((word, i) => {
-        const span = document.createElement("span");
-        span.innerHTML = word + "&nbsp;";
-        span.style.opacity = "0";
-        span.style.display = "inline-block";
-        span.style.animation = `slideUp 0.5s forwards ${i * 0.1}s`;
-        if (i > 1) span.classList.add('gradient-text');
-        el.appendChild(span);
-    });
-}
-
-function showSection(id) {
-    document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
-    const target = document.getElementById(id);
-    target.style.display = (id === 'home') ? 'flex' : 'block';
-    if(id === 'home') { 
-        animateText(nameText, 'animated-name'); 
-        animateText(descText, 'animated-desc'); 
-    }
-    window.scrollTo(0,0);
-}
-
-window.onload = () => showSection('home');
-</script>
-
-</body>
-</html>
-
-
+                <h4>Codekaze AIR-665</h4
