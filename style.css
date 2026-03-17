@@ -47,7 +47,7 @@ body::before {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(15px);
     z-index: 2000;
     border-bottom: 1px solid var(--glass-border);
@@ -70,7 +70,6 @@ body::before {
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -83,7 +82,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 8%;
+    padding: 100px 8% 40px; /* FIXED for navbar */
 }
 
 .hero-content {
@@ -101,7 +100,6 @@ body::before {
 .hero-text h1 {
     font-size: 3.5rem;
     font-weight: 800;
-    line-height: 1.1;
     margin-bottom: 20px;
 }
 
@@ -118,83 +116,45 @@ body::before {
 }
 
 .hero-photo {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: blobify 8s ease-in-out infinite;
-    border: 8px solid white;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-}
-
-@keyframes blobify {
-    0%, 100% { border-radius: 30% 70% 70% 30%; }
-    50% { border-radius: 60% 40% 40% 60%; }
+    border-radius: 50%;
+    border: 6px solid white;
 }
 
 /* ===== SECTIONS ===== */
 .section {
-    display: none;
-    padding: 140px 8% 80px;
-    animation: slideUp 0.7s ease-out;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-title {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 50px;
-    text-align: center;
+    display: block; /* IMPORTANT FIX */
+    padding: 120px 8% 60px;
 }
 
 /* ===== GRID ===== */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 /* ===== CARD ===== */
 .card {
     background: var(--glass);
-    backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
-    padding: 35px;
-    border-radius: 24px;
-    transition: var(--transition);
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    background: white;
-    border-color: var(--primary);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.08);
+    transform: translateY(-5px);
 }
 
-/* ===== BADGE & BUTTON ===== */
-.badge {
-    padding: 6px 14px;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--primary);
-    border-radius: 100px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    display: inline-block;
-    margin: 4px;
-}
-
+/* ===== BUTTON ===== */
 .btn {
-    padding: 12px 28px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 10px 20px;
+    background: var(--primary);
     color: white;
-    border-radius: 12px;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-block;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
 }
@@ -202,24 +162,15 @@ body::before {
 /* ===== CERTIFICATIONS ===== */
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.cert-card {
-    padding: 15px !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .cert-img-container {
-    width: 100%;
-    height: 220px;
-    background: #fff;
-    border-radius: 12px;
+    height: 200px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
-    margin-bottom: 12px;
+    align-items: center;
 }
 
 .cert-img-container img {
@@ -231,39 +182,24 @@ body::before {
 /* ===== CONTACT ===== */
 .contact-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
 .contact-box {
     background: white;
-    padding: 30px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
-    border: 1px solid #f1f5f9;
-}
-
-.contact-box i {
-    font-size: 2rem;
-    color: var(--primary);
-    margin-bottom: 10px;
 }
 
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    padding: 50px;
-    border-top: 1px solid var(--glass-border);
-    color: var(--text-muted);
+    padding: 30px;
 }
 
-/* ===== ANIMATION ===== */
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== MOBILE VIEW ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
     .navbar {
@@ -272,7 +208,9 @@ footer {
     }
 
     .nav-links {
-        display: none; /* hide menu */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .hero-content {
@@ -280,44 +218,23 @@ footer {
         text-align: center;
     }
 
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
     .hero-photo {
         width: 200px;
         height: 200px;
     }
 
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cert-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .grid,
+    .cert-grid,
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
-
-    .section {
-        padding: 120px 5% 60px;
-    }
 }
 
-/* ===== TABLET ===== */
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cert-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ===== RESPONSIVE IMAGES ===== */
+/* ===== IMAGE FIX ===== */
 img {
     max-width: 100%;
     height: auto;
