@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkata Ravi Teja Abburi | AI & DS Portfolio</title>
+    <title>Venkata Ravi Teja | AI Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="logo" onclick="showSection('home')" style="font-weight:800; font-size:1.5rem; color:var(--text-main); cursor:pointer;">RT<span class="gradient-text">.</span></div>
+    <div class="logo" onclick="showSection('home')" style="font-weight:800; font-size:1.5rem; cursor:pointer;">RT<span class="gradient-text">.</span></div>
     <ul class="nav-links">
         <li><a onclick="showSection('home')">Home</a></li>
         <li><a onclick="showSection('about')">About</a></li>
@@ -25,47 +25,38 @@
 <section id="home" class="hero">
     <div class="hero-content">
         <div class="hero-text">
-            <span class="badge" style="margin-bottom:20px;">AVAILABLE FOR HIRE</span>
-            <h1>I'm <span class="gradient-text">Venkata Ravi Teja</span></h1>
-            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; max-width: 600px;">
-                An AI Engineer & Data Scientist specialized in building predictive systems and high-performance ML pipelines.
-            </p>
-            <div style="display: flex; gap: 20px;">
-                <button class="btn" onclick="showSection('projects')">Explore Work</button>
-                <button class="btn" style="background: rgba(255,255,255,0.05); color: white;" onclick="showSection('contact')">Hire Me</button>
-            </div>
+            <span class="badge" style="margin-bottom:15px;">AI ENGINEER & DATA SCIENTIST</span>
+            <h1 style="font-size:3.8rem;">I'm <span class="gradient-text">Venkata Ravi Teja</span></h1>
+            <p style="color:var(--text-muted); font-size:1.1rem; margin-bottom:30px;">Specializing in high-performance ML pipelines and predictive analytics.</p>
+            <button class="btn" onclick="showSection('projects')">See My Work</button>
         </div>
         <div class="hero-photo-container">
-            <img src="me.jpg" alt="Venkata Ravi Teja" class="hero-photo">
+            <img src="me.jpg" class="hero-photo" alt="Ravi Teja">
         </div>
     </div>
 </section>
 
 <section id="about" class="section">
     <div class="container">
-        <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Profile <span class="gradient-text">Overview</span></h2>
+        <h2 style="text-align:center; margin-bottom:50px;">The <span class="gradient-text">Profile</span></h2>
         <div class="grid">
             <div class="card">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <p><b>B.Tech CSE - Data Science</b><br>Raghu Institute of Tech | 2020-2024<br><span class="badge">8.08 CGPA</span></p>
-                <div style="height:1px; background:var(--glass-border); margin:20px 0; opacity:0.1;"></div>
-                <p><b>Intermediate (MPC)</b><br>Vision Jr College, Guntur | 2018-2020<br><span class="badge">8.73 CGPA</span></p>
+                <h3>Education</h3>
+                <p><b>B.Tech CSE - Data Science</b><br>Raghu Institute of Tech | 2020-24<br><span class="badge">8.08 CGPA</span></p>
+                <hr style="opacity:0.1; margin:15px 0;">
+                <p><b>Intermediate (MPC)</b><br>Vision Jr College | 2018-20<br><span class="badge">8.73 CGPA</span></p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-tools"></i> Skills</h3>
-                <div class="skills-tags">
-                    <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">ML</span>
-                    <span class="badge">Pandas</span> <span class="badge">Power BI</span> <span class="badge">Scikit-learn</span>
-                    <span class="badge">XGBoost</span> <span class="badge">Matplotlib</span> <span class="badge">REST API</span>
-                </div>
+                <h3>Technical Skills</h3>
+                <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">ML</span> 
+                <span class="badge">Pandas</span> <span class="badge">Scikit-learn</span> <span class="badge">Power BI</span>
+                <span class="badge">Git</span> <span class="badge">XGBoost</span>
             </div>
             <div class="card">
-                <h3><i class="fas fa-heart"></i> Strengths</h3>
-                <ul>
-                    <li>Optimistic & Quick-Witted</li>
-                    <li>NSS Volunteer (2022-2024)</li>
-                    <li>100+ Problems on HackerRank</li>
-                </ul>
+                <h3>Achievements</h3>
+                <p><i class="fa fa-star" style="color:gold"></i> <b>Codekaze AIR-665</b></p>
+                <p><i class="fa fa-code"></i> 100+ HackerRank Solved</p>
+                <p><i class="fa fa-users"></i> NSS Volunteer (2022-24)</p>
             </div>
         </div>
     </div>
@@ -73,23 +64,17 @@
 
 <section id="experience" class="section">
     <div class="container">
-        <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">My <span class="gradient-text">Journey</span></h2>
+        <h2 style="text-align:center; margin-bottom:50px;">Experience <span class="gradient-text">Timeline</span></h2>
         <div class="grid">
             <div class="card">
-                <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
-                    <span class="badge">AI INTERN</span>
-                    <span class="text-dim" style="font-size:0.8rem; color:var(--text-muted);">Nov 2024 – Apr 2025</span>
-                </div>
-                <h3>DeviSkillHub</h3>
-                <p>Built end-to-end ML pipelines with data preprocessing, EDA, and feature engineering. Trained classification models using Scikit-learn.</p>
+                <span class="badge">Nov 2024 - Apr 2025</span>
+                <h3>AI Intern @ DeviSkillHub</h3>
+                <p>Managed full ML pipelines: Data Cleaning, EDA, and Classification models.</p>
             </div>
             <div class="card">
-                <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
-                    <span class="badge">AI INTERN</span>
-                    <span class="text-dim" style="font-size:0.8rem; color:var(--text-muted);">Jul 2023 – Sep 2023</span>
-                </div>
-                <h3>RoboCoupler</h3>
-                <p>Analyzed datasets and developed prediction models. Collaborated with engineers for business alignment.</p>
+                <span class="badge">Jul 2023 - Sep 2023</span>
+                <h3>AI Intern @ RoboCoupler</h3>
+                <p>Performed data analysis and classification modeling for business solutions.</p>
             </div>
         </div>
     </div>
@@ -97,22 +82,20 @@
 
 <section id="projects" class="section">
     <div class="container">
-        <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Featured <span class="gradient-text">Works</span></h2>
+        <h2 style="text-align:center; margin-bottom:50px;">Latest <span class="gradient-text">Projects</span></h2>
         <div class="grid">
             <div class="card">
                 <h3>T20 World Cup Analytics</h3>
-                <p style="color:var(--text-muted); margin: 15px 0;">Dream11 team selection using Python & Power BI. Reduced processing by 50%.</p>
-                <a href="https://app.powerbi.com/groups/me/reports/..." target="_blank" class="badge" style="color:var(--primary); border:1px solid var(--primary); text-decoration:none;">Live Dashboard</a>
+                <p>Dream11 team selection using Python & Power BI. 50% faster processing.</p>
             </div>
             <div class="card">
-                <h3>Dynamic Pricing via RL</h3>
-                <p style="color:var(--text-muted); margin: 15px 0;">Reinforcement Learning (Deep Q-Learning) system increasing revenue by 25% and profits by 3.48%.</p>
-                <span class="badge">Publication</span>
+                <h3>Dynamic Pricing RL</h3>
+                <p>Deep Q-Learning model. Increased revenue by 25%.</p>
             </div>
             <div class="card">
                 <h3>Uber Demand Hub</h3>
-                <p style="color:var(--text-muted); margin: 15px 0;">Built a Streamlit app for ride demand analysis and driver insights.</p>
-                <a href="https://driveruber.streamlit.app/" target="_blank" class="badge" style="color:var(--primary); border:1px solid var(--primary); text-decoration:none;">Launch App</a>
+                <p>Streamlit ride analysis app.</p>
+                <a href="https://driveruber.streamlit.app/" target="_blank" class="badge">Live App</a>
             </div>
         </div>
     </div>
@@ -120,51 +103,75 @@
 
 <section id="certifications" class="section">
     <div class="container">
-        <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Global <span class="gradient-text">Badges</span></h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-            <div class="card" style="text-align:center; padding: 20px;">
-                <div style="width:100%; height:150px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:15px;">
-                    <img src="aws.png" style="max-width:80%; max-height:80%; object-fit:contain;">
-                </div>
+        <h2 style="text-align:center; margin-bottom:50px;">Credentials <span class="gradient-text">& Badges</span></h2>
+        <div class="grid">
+            <div class="card">
+                <div class="cert-img-box"><img src="Coding_ninjas.jpg"></div>
+                <h4>Codekaze AIR-665</h4>
+                <p class="text-muted">Coding Ninjas</p>
+            </div>
+            <div class="card">
+                <div class="cert-img-box"><img src="SQL_HACKERRANK.png"></div>
+                <h4>SQL (Advanced)</h4>
+                <p class="text-muted">HackerRank</p>
+            </div>
+            <div class="card">
+                <div class="cert-img-box"><img src="Python-Advance.jpg"></div>
+                <h4>Python Advanced</h4>
+                <p class="text-muted">Cutshort</p>
+            </div>
+            <div class="card">
+                <div class="cert-img-box"><img src="aws.png"></div>
                 <h4>Cloud Foundations</h4>
-                <p class="text-dim" style="font-size:0.8rem; color:var(--text-muted);">AWS Academy</p>
+                <p class="text-muted">AWS Academy</p>
             </div>
+            <div class="card">
+                <div class="cert-img-box"><img src="Nptel.jpg"></div>
+                <h4>DBMS Expert</h4>
+                <p class="text-muted">NPTEL Swayam</p>
             </div>
+            <div class="card">
+                <div class="cert-img-box"><img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png"></div>
+                <h4>Data Analysis Career Essentials</h4>
+                <p class="text-muted">Microsoft & LinkedIn</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="contact" class="section">
     <div class="container">
-        <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Connect with <span class="gradient-text">Ravi</span></h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
-            <a href="mailto:abburiraviteja4@gmail.com" class="card" style="text-align:center; text-decoration:none;">
-                <i class="fas fa-envelope fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
-                <h4>Email</h4>
-            </a>
-            <a href="https://wa.me/919618760508" target="_blank" class="card" style="text-align:center; text-decoration:none;">
-                <i class="fab fa-whatsapp fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
-                <h4>WhatsApp</h4>
+        <h2 style="text-align:center; margin-bottom:50px;">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <a href="https://github.com/tejabburi3" target="_blank" class="card" style="text-align:center; text-decoration:none;">
+                <i class="fab fa-github fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
+                <h4>GitHub</h4>
+                <p class="text-muted">@tejabburi3</p>
             </a>
             <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank" class="card" style="text-align:center; text-decoration:none;">
                 <i class="fab fa-linkedin fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
                 <h4>LinkedIn</h4>
             </a>
+            <a href="mailto:abburiraviteja4@gmail.com" class="card" style="text-align:center; text-decoration:none;">
+                <i class="fas fa-envelope fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
+                <h4>Email</h4>
+            </a>
         </div>
     </div>
 </section>
 
-<footer style="text-align:center; padding: 60px; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
-    <p>&copy; 2026 Venkata Ravi Teja Abburi | Engineering Intelligence</p>
+<footer style="text-align:center; padding: 50px; opacity: 0.5; font-size: 0.8rem; border-top: 1px solid var(--glass-border);">
+    &copy; 2026 Venkata Ravi Teja Abburi. Built with AI.
 </footer>
 
 <script>
-function showSection(id) {
-    document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
-    const target = document.getElementById(id);
-    target.style.display = (id === 'home') ? 'flex' : 'block';
-    window.scrollTo(0,0);
-}
-window.onload = () => showSection('home');
+    function showSection(id) {
+        document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
+        const target = document.getElementById(id);
+        target.style.display = (id === 'home') ? 'flex' : 'block';
+        window.scrollTo(0,0);
+    }
+    window.onload = () => showSection('home');
 </script>
 
 </body>
