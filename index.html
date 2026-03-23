@@ -8,19 +8,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
 <nav class="navbar">
     <div class="logo" onclick="showSection('home')">RT<span class="gradient-text">.</span></div>
-    <ul class="nav-links">
-        <li><a onclick="showSection('home')">Home</a></li>
-        <li><a onclick="showSection('about')">About</a></li>
-        <li><a onclick="showSection('experience')">Experience</a></li>
-        <li><a onclick="showSection('projects')">Projects</a></li>
-        <li><a onclick="showSection('certifications')">Certifications</a></li>
-        <li><a onclick="showSection('contact')">Contact</a></li>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="nav-list">
+        <li><a onclick="handleNav('home')">Home</a></li>
+        <li><a onclick="handleNav('about')">About</a></li>
+        <li><a onclick="handleNav('experience')">Experience</a></li>
+        <li><a onclick="handleNav('projects')">Projects</a></li>
+        <li><a onclick="handleNav('certifications')">Certifications</a></li>
+        <li><a onclick="handleNav('contact')">Contact</a></li>
     </ul>
-    <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
+    <a href="VenkataRaviTeja_Abburi.pdf" class="btn resume-btn" target="_blank">Resume</a>
 </nav>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+
+    // Toggle Mobile Menu
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('mobile-active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Close menu when a link is clicked
+    function handleNav(id) {
+        showSection(id);
+        navList.classList.remove('mobile-active');
+        document.querySelector('#mobile-menu i').classList.add('fa-bars');
+        document.querySelector('#mobile-menu i').classList.remove('fa-times');
+    }
+
+    function showSection(id) {
+        document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
+        const target = document.getElementById(id);
+        target.style.display = (id === 'home') ? 'flex' : 'block';
+        window.scrollTo(0,0);
+    }
+    window.onload = () => showSection('home');
+</script>
 
 <section id="home" class="hero">
     <div class="hero-content">
