@@ -20,7 +20,6 @@ body {
     overflow-x: hidden;
     line-height: 1.6;
 }
-
 /* 🌀 ANIMATED BACKGROUND MESH */
 body::before {
     content: "";
