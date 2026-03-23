@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    
 <nav class="navbar">
     <div class="logo" onclick="showSection('home')">RT<span class="gradient-text">.</span></div>
     
@@ -26,50 +27,21 @@
     <a href="VenkataRaviTeja_Abburi.pdf" class="btn resume-btn" target="_blank">Resume</a>
 </nav>
 
-<script>
-    const menuToggle = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-
-    // Toggle Mobile Menu
-    menuToggle.addEventListener('click', () => {
-        navList.classList.toggle('mobile-active');
-        const icon = menuToggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-    });
-
-    // Close menu when a link is clicked
-    function handleNav(id) {
-        showSection(id);
-        navList.classList.remove('mobile-active');
-        document.querySelector('#mobile-menu i').classList.add('fa-bars');
-        document.querySelector('#mobile-menu i').classList.remove('fa-times');
-    }
-
-    function showSection(id) {
-        document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
-        const target = document.getElementById(id);
-        target.style.display = (id === 'home') ? 'flex' : 'block';
-        window.scrollTo(0,0);
-    }
-    window.onload = () => showSection('home');
-</script>
-
 <section id="home" class="hero">
     <div class="hero-content">
         <div class="hero-text">
             <span class="badge" style="margin-bottom:20px;">AVAILABLE FOR HIRE</span>
             <h1>I'm <span class="gradient-text">Venkata Ravi Teja Abburi</span></h1>
-            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; max-width: 600px;">
+            <p class="hero-subtext">
                 An AI Engineer & Data Scientist specialized in building predictive systems and high-performance ML pipelines.
             </p>
-            <div style="display: flex; gap: 20px;">
+            <div class="hero-btns">
                 <button class="btn" onclick="showSection('projects')">Explore Work</button>
-                <button class="btn" style="background: rgba(255,255,255,0.05); color: white;" onclick="showSection('contact')">Hire Me</button>
+                <button class="btn btn-outline" onclick="showSection('contact')">Hire Me</button>
             </div>
         </div>
         <div class="hero-photo-container">
-            <img src="1.jpg" alt="Full Portrait" class="hero-photo">
+            <img src="1.jpg" alt="Venkata Ravi Teja" class="hero-photo">
         </div>
     </div>
 </section>
@@ -154,48 +126,22 @@
 <section id="certifications" class="section">
     <div class="container">
         <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Global <span class="gradient-text">Badges</span></h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-            
-            <div class="card" style="text-align:center; padding: 30px;">
-                <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
-                    <img src="aws.png" style="max-width:90%; max-height:90%; object-fit:contain;">
-                </div>
-                <h3 style="font-size:1.4rem;">Cloud Foundations</h3>
-                <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">AWS Academy</p>
+        <div class="grid">
+            <div class="card" style="text-align:center;">
+                <img src="aws.png" style="width:80px; margin-bottom:15px;">
+                <h3>Cloud Foundations</h3>
+                <p style="color:var(--text-muted);">AWS Academy</p>
             </div>
-
-            <div class="card" style="text-align:center; padding: 30px;">
-                <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
-                    <img src="Python-Advance.jpg" style="max-width:90%; max-height:90%; object-fit:contain;">
-                </div>
-                <h3 style="font-size:1.4rem;">Python for Data Science</h3>
-                <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">CutShort</p>
+            <div class="card" style="text-align:center;">
+                <img src="Python-Advance.jpg" style="width:80px; margin-bottom:15px;">
+                <h3>Python for Data Science</h3>
+                <p style="color:var(--text-muted);">CutShort</p>
             </div>
-
-            <div class="card" style="text-align:center; padding: 30px;">
-                <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
-                    <img src="SQL_HACKERRANK.png" style="max-width:90%; max-height:90%; object-fit:contain;">
-                </div>
-                <h3 style="font-size:1.4rem;">SQL Advanced</h3>
-                <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">HackerRank</p>
+            <div class="card" style="text-align:center;">
+                <img src="SQL_HACKERRANK.png" style="width:80px; margin-bottom:15px;">
+                <h3>SQL Advanced</h3>
+                <p style="color:var(--text-muted);">HackerRank</p>
             </div>
-
-            <div class="card" style="text-align:center; padding: 30px;">
-                <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
-                    <img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png" style="max-width:90%; max-height:90%; object-fit:contain;">
-                </div>
-                <h3 style="font-size:1.4rem;">Data Analysis</h3>
-                <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">Linkedin & Microsoft</p>
-            </div>
-
-            <div class="card" style="text-align:center; padding: 30px;">
-                <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
-                    <img src="Coding_ninjas.jpg" style="max-width:90%; max-height:90%; object-fit:contain;">
-                </div>
-                <h3 style="font-size:1.4rem;">CodeKaze - AIR 665</h3>
-                <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">Coding Ninjas</p>
-            </div>
-
         </div>
     </div>
 </section>
@@ -203,7 +149,7 @@
 <section id="contact" class="section">
     <div class="container">
         <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Connect with <span class="gradient-text">Ravi</span></h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
             <a href="mailto:abburiraviteja4@gmail.com" class="card" style="text-align:center; text-decoration:none;">
                 <i class="fas fa-envelope fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
                 <h4>Email</h4>
@@ -211,10 +157,6 @@
             <a href="https://github.com/tejabburi3" target="_blank" class="card" style="text-align:center; text-decoration:none;">
                 <i class="fab fa-github fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
                 <h4>GitHub</h4>
-            </a>
-            <a href="https://wa.me/919618760508" target="_blank" class="card" style="text-align:center; text-decoration:none;">
-                <i class="fab fa-whatsapp fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
-                <h4>WhatsApp</h4>
             </a>
             <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank" class="card" style="text-align:center; text-decoration:none;">
                 <i class="fab fa-linkedin fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
@@ -224,19 +166,34 @@
     </div>
 </section>
 
-<footer style="text-align:center; padding: 60px; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+<footer style="text-align:center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
     <p>&copy; 2026 Venkata Ravi Teja Abburi | Engineering Intelligence</p>
 </footer>
 
 <script>
-function showSection(id) {
-    document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
-    const target = document.getElementById(id);
-    target.style.display = (id === 'home') ? 'flex' : 'block';
-    window.scrollTo(0,0);
-}
-window.onload = () => showSection('home');
-</script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
 
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('mobile-active');
+        menuToggle.querySelector('i').classList.toggle('fa-bars');
+        menuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+
+    function handleNav(id) {
+        showSection(id);
+        navList.classList.remove('mobile-active');
+        menuToggle.querySelector('i').classList.add('fa-bars');
+        menuToggle.querySelector('i').classList.remove('fa-times');
+    }
+
+    function showSection(id) {
+        document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
+        const target = document.getElementById(id);
+        if(target) target.style.display = (id === 'home') ? 'flex' : 'block';
+        window.scrollTo(0,0);
+    }
+    window.onload = () => showSection('home');
+</script>
 </body>
 </html>
