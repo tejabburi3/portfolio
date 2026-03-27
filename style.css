@@ -28,7 +28,6 @@ body::before {
                 radial-gradient(at 50% 100%, rgba(244, 63, 94, 0.08) 0px, transparent 50%);
     z-index: -1;
 }
-
 /* ================= NAVIGATION ================ */
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
