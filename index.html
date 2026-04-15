@@ -1,209 +1,417 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Venkata Ravi Teja Abburi | AI & DS Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
+
 <body>
-    
+
+
+
 <nav class="navbar">
+
     <div class="logo" onclick="showSection('home')">RT<span class="gradient-text">.</span></div>
+
     <ul class="nav-links">
+
         <li><a onclick="showSection('home')">Home</a></li>
+
         <li><a onclick="showSection('about')">About</a></li>
+
         <li><a onclick="showSection('experience')">Experience</a></li>
+
         <li><a onclick="showSection('projects')">Projects</a></li>
+
         <li><a onclick="showSection('certifications')">Certifications</a></li>
+
         <li><a onclick="showSection('contact')">Contact</a></li>
+
     </ul>
+
     <a href="VenkataRaviTeja_Abburi.pdf" class="btn" target="_blank">Resume</a>
+
 </nav>
-    
+
+
+
 <section id="home" class="hero">
+
     <div class="hero-content">
+
         <div class="hero-text">
+
             <span class="badge" style="margin-bottom:20px;">AVAILABLE FOR HIRE</span>
+
             <h1>I'm <span class="gradient-text">Venkata Ravi Teja Abburi</span></h1>
+
             <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; max-width: 600px;">
+
                 An AI Engineer & Data Scientist specialized in building predictive systems and high-performance ML pipelines.
+
             </p>
+
             <div style="display: flex; gap: 20px;">
+
                 <button class="btn" onclick="showSection('projects')">Explore Work</button>
+
                 <button class="btn" style="background: rgba(255,255,255,0.05); color: white;" onclick="showSection('contact')">Hire Me</button>
+
             </div>
+
         </div>
+
         <div class="hero-photo-container">
+
             <img src="1.jpg" alt="Full Portrait" class="hero-photo">
+
         </div>
+
     </div>
+
 </section>
+
+
 
 <section id="about" class="section">
+
     <div class="container">
+
         <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Profile <span class="gradient-text">Overview</span></h2>
+
         <div class="grid">
+
             <div class="card">
+
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+
                 <p><b>B.Tech CSE - Data Science</b><br>Raghu Institute of Tech | 2020-2024<br><span class="badge">8.08 CGPA</span></p>
+
                 <div style="height:1px; background:var(--glass-border); margin:20px 0; opacity:0.1;"></div>
+
                 <p><b>Intermediate (MPC)</b><br>Vision Jr College, Guntur | 2018-2020<br><span class="badge">8.73 CGPA</span></p>
+
             </div>
+
             <div class="card">
+
                 <h3><i class="fas fa-tools"></i> Skills</h3>
+
                 <div class="skills-tags">
+
                     <span class="badge">Python</span> <span class="badge">SQL</span> <span class="badge">ML</span>
+
                     <span class="badge">Pandas</span> <span class="badge">Power BI</span> <span class="badge">Scikit-learn</span>
+
                     <span class="badge">XGBoost</span> <span class="badge">Matplotlib</span> <span class="badge">REST API</span>
+
                 </div>
+
             </div>
+
             <div class="card">
+
                 <h3><i class="fas fa-heart"></i> Strengths</h3>
+
                 <ul>
+
                     <li>Optimistic & Quick-Witted</li>
+
                     <li>NSS Volunteer (2022-2024)</li>
+
                     <li>100+ Problems on HackerRank</li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
+
+
 
 <section id="experience" class="section">
+
     <div class="container">
+
         <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">My <span class="gradient-text">Journey</span></h2>
+
         <div class="grid">
+
             <div class="card">
+
                 <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+
                     <span class="badge">AI INTERN</span>
+
                     <span style="font-size:0.8rem; color:var(--text-muted);">Nov 2024 – Apr 2025</span>
+
                 </div>
+
                 <h3>DeviSkillHub</h3>
+
                 <p>Built end-to-end ML pipelines and trained models using Scikit-learn.</p>
+
             </div>
+
             <div class="card">
+
                 <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+
                     <span class="badge">AI INTERN</span>
+
                     <span style="font-size:0.8rem; color:var(--text-muted);">Jul 2023 – Sep 2023</span>
+
                 </div>
+
                 <h3>RoboCoupler</h3>
+
                 <p>Analyzed datasets and developed prediction models for business growth.</p>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
+
+
 
 <section id="projects" class="section">
+
     <div class="container">
+
         <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Featured <span class="gradient-text">Works</span></h2>
+
         <div class="grid">
+
             <div class="card">
+
                 <h3>T20 World Cup Analytics</h3>
+
                 <p style="color:var(--text-muted); margin: 15px 0;">Selection using Python & Power BI. Reduced processing by 50%.</p>
+
                 <a href="#" class="badge" style="color:var(--primary); border:1px solid var(--primary); text-decoration:none;">Live Dashboard</a>
+
             </div>
+
             <div class="card">
+
                 <h3>Dynamic Pricing via RL</h3>
+
                 <p style="color:var(--text-muted); margin: 15px 0;">Reinforcement Learning system increasing revenue by 25%.</p>
+
                 <span class="badge">Publication</span>
+
             </div>
+
             <div class="card">
+
                 <h3>Uber Demand Hub</h3>
+
                 <p style="color:var(--text-muted); margin: 15px 0;">Streamlit app for ride demand analysis and insights.</p>
+
                 <a href="https://driveruber.streamlit.app/" target="_blank" class="badge" style="color:var(--primary); border:1px solid var(--primary); text-decoration:none;">Launch App</a>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
+
+
 
 <section id="certifications" class="section">
+
     <div class="container">
+
         <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Global <span class="gradient-text">Badges</span></h2>
+
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+
             
+
             <div class="card" style="text-align:center; padding: 30px;">
+
                 <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
+
                     <img src="aws.png" style="max-width:90%; max-height:90%; object-fit:contain;">
+
                 </div>
+
                 <h3 style="font-size:1.4rem;">Cloud Foundations</h3>
+
                 <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">AWS Academy</p>
+
             </div>
 
+
+
             <div class="card" style="text-align:center; padding: 30px;">
+
                 <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
+
                     <img src="Python-Advance.jpg" style="max-width:90%; max-height:90%; object-fit:contain;">
+
                 </div>
+
                 <h3 style="font-size:1.4rem;">Python for Data Science</h3>
+
                 <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">CutShort</p>
+
             </div>
 
+
+
             <div class="card" style="text-align:center; padding: 30px;">
+
                 <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
+
                     <img src="SQL_HACKERRANK.png" style="max-width:90%; max-height:90%; object-fit:contain;">
+
                 </div>
+
                 <h3 style="font-size:1.4rem;">SQL Advanced</h3>
+
                 <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">HackerRank</p>
+
             </div>
 
+
+
             <div class="card" style="text-align:center; padding: 30px;">
+
                 <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
+
                     <img src="Career Essentials in Data Analysis by Microsoft and LinkedIn.png" style="max-width:90%; max-height:90%; object-fit:contain;">
+
                 </div>
+
                 <h3 style="font-size:1.4rem;">Data Analysis</h3>
+
                 <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">Linkedin & Microsoft</p>
+
             </div>
 
+
+
             <div class="card" style="text-align:center; padding: 30px;">
+
                 <div style="width:100%; height:220px; background:rgba(255,255,255,0.02); display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:20px;">
+
                     <img src="Coding_ninjas.jpg" style="max-width:90%; max-height:90%; object-fit:contain;">
+
                 </div>
+
                 <h3 style="font-size:1.4rem;">CodeKaze - AIR 665</h3>
+
                 <p class="text-dim" style="font-size:0.9rem; color:var(--text-muted);">Coding Ninjas</p>
+
             </div>
+
+
 
         </div>
+
     </div>
+
 </section>
+
+
 
 <section id="contact" class="section">
+
     <div class="container">
+
         <h2 style="text-align:center; font-size:3rem; margin-bottom:60px;">Connect with <span class="gradient-text">Ravi</span></h2>
+
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+
             <a href="mailto:abburiraviteja4@gmail.com" class="card" style="text-align:center; text-decoration:none;">
+
                 <i class="fas fa-envelope fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
+
                 <h4>Email</h4>
+
             </a>
+
             <a href="https://github.com/tejabburi3" target="_blank" class="card" style="text-align:center; text-decoration:none;">
+
                 <i class="fab fa-github fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
+
                 <h4>GitHub</h4>
+
             </a>
+
             <a href="https://wa.me/919618760508" target="_blank" class="card" style="text-align:center; text-decoration:none;">
+
                 <i class="fab fa-whatsapp fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
+
                 <h4>WhatsApp</h4>
+
             </a>
+
             <a href="https://www.linkedin.com/in/venkata-ravi-teja-abburi-b99b00210" target="_blank" class="card" style="text-align:center; text-decoration:none;">
+
                 <i class="fab fa-linkedin fa-2x" style="color:var(--primary); margin-bottom:10px;"></i>
+
                 <h4>LinkedIn</h4>
+
             </a>
+
         </div>
+
     </div>
+
 </section>
 
+
+
 <footer style="text-align:center; padding: 60px; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+
     <p>&copy; 2026 Venkata Ravi Teja Abburi | Engineering Intelligence</p>
+
 </footer>
 
+
+
 <script>
+
 function showSection(id) {
+
     document.querySelectorAll('.section, .hero').forEach(s => s.style.display = 'none');
+
     const target = document.getElementById(id);
+
     target.style.display = (id === 'home') ? 'flex' : 'block';
+
     window.scrollTo(0,0);
+
 }
+
 window.onload = () => showSection('home');
+
 </script>
 
+
+
 </body>
+
 </html>
